@@ -1,0 +1,38 @@
+# Dataset
+archive/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Pytest
+.pytest_cache/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ML models
+*.pth
+*.pt
+*.h5
+*.keras
+*.onnx
+
+# Training outputs
+checkpoints/
+runs/
+logs/
+outputs/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

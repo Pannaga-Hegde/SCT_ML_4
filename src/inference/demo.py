@@ -1,0 +1,458 @@
+"""GestureFlow — Real-Time Webcam Gesture Recognition Demo.
+
+Main application entry point.  Runs the complete end-to-end inference pipeline:
+
+  Webcam → CameraStream → HandDetector → HandROIPreprocessor
+        → GesturePredictor → PredictionStabilizer → OverlayRenderer → Display
+
+Keyboard controls (press key while the OpenCV window is focused):
+  Q  — Quit
+  R  — Reset session statistics
+  M  — Toggle mirror (horizontal flip)
+  L  — Toggle MediaPipe landmark rendering
+  B  — Toggle bounding box
+  S  — Toggle skeleton rendering
+  F  — Toggle FPS display
+  P  — Pause / resume prediction
+  C  — Capture screenshot  →  outputs/inference/screenshots/
+  O  — Save debug bundle  →  outputs/inference/debug/
+  H  — Hide / show full telemetry HUD
+  D  — Toggle Developer Mode window
+  1  — Preprocessing mode: Grayscale
+  2  — Preprocessing mode: Histogram Equalization
+  3  — Preprocessing mode: CLAHE
+  SPACE — Quick ROI snapshot
+
+Usage:
+  python -m src.inference.demo                 # default camera 0
+  python -m src.inference.demo --camera 1      # external camera
+  python -m src.inference.demo --no-mirror
+  python -m src.inference.demo --mode clahe
+  python -m src.inference.demo --dev           # start with Developer Mode on
+"""
+
+import argparse
+import csv
+import json
+import sys
+import time
+from datetime import datetime
+from pathlib import Path
+from typing import Optional
+
+import cv2
+import numpy as np
+
+from src.config.inference_config import InferenceConfig, PreprocessMode, inference_config
+from src.inference.camera import CameraStream
+from src.inference.hand_detector import HandDetector
+from src.inference.overlay import OverlayRenderer
+from src.inference.predictor import GesturePredictor
+from src.inference.preprocess import HandROIPreprocessor
+from src.inference.stabilizer import PredictionStabilizer
+
+
+_MODE_MAP = {
+    "gray": PreprocessMode.GRAY,
+    "hist_eq": PreprocessMode.HIST_EQ,
+    "clahe": PreprocessMode.CLAHE,
+}
+
+_WIN_MAIN = "GestureFlow — Real-Time Gesture Recognition"
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CLI argument parsing
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="GestureFlow — Real-time hand gesture recognition demo.",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+    )
+    parser.add_argument("--camera", type=int, default=0, help="Camera device index.")
+    parser.add_argument("--no-mirror", action="store_true", help="Disable horizontal flip.")
+    parser.add_argument(
+        "--mode",
+        choices=["gray", "hist_eq", "clahe"],
+        default="gray",
+        help="Initial preprocessing mode.",
+    )
+    parser.add_argument("--dev", action="store_true", help="Start with Developer Mode enabled.")
+    parser.add_argument("--confidence", type=float, default=0.70, help="Minimum confidence threshold.")
+    parser.add_argument("--window", type=int, default=5, help="Prediction stabilizer window size.")
+    return parser.parse_args()
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Debug bundle / screenshot helpers
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _save_debug_bundle(
+    cfg: InferenceConfig,
+    frame: np.ndarray,
+    roi_bgr: Optional[np.ndarray],
+    gray_image: Optional[np.ndarray],
+    prediction: Optional[dict],
+    tag: str = "",
+) -> Path:
+    """Save debug bundle: frame.jpg, roi.jpg, normalized.png, prediction.json."""
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
+    bundle_dir = cfg.debug_dir / f"{ts}{('_' + tag) if tag else ''}"
+    bundle_dir.mkdir(parents=True, exist_ok=True)
+
+    cv2.imwrite(str(bundle_dir / "frame.jpg"), frame)
+
+    if roi_bgr is not None and roi_bgr.size > 0:
+        cv2.imwrite(str(bundle_dir / "roi.jpg"), roi_bgr)
+
+    if gray_image is not None and gray_image.size > 0:
+        cv2.imwrite(str(bundle_dir / "normalized.png"), gray_image)
+
+    if prediction is not None:
+        payload = {k: v for k, v in prediction.items() if k != "top3"}
+        payload["top3"] = [
+            {"label": lbl, "confidence": round(conf, 4)}
+            for lbl, conf in (prediction.get("top3") or [])
+        ]
+        with open(bundle_dir / "prediction.json", "w", encoding="utf-8") as f:
+            json.dump(payload, f, indent=2)
+
+    print(f"[Debug] Bundle saved → {bundle_dir}")
+    return bundle_dir
+
+
+def _save_screenshot(cfg: InferenceConfig, frame: np.ndarray) -> Path:
+    """Save current frame as a JPEG screenshot."""
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    path = cfg.screenshot_dir / f"screenshot_{ts}.jpg"
+    cv2.imwrite(str(path), frame)
+    print(f"[Screenshot] Saved → {path}")
+    return path
+
+
+def _append_session_log(
+    log_path: Path,
+    timestamp: str,
+    label: str,
+    confidence: float,
+    is_stable: bool,
+    preprocess_mode: str,
+    fps: float,
+) -> None:
+    """Append one row to the session CSV log."""
+    write_header = not log_path.exists()
+    with open(log_path, "a", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(
+            f,
+            fieldnames=[
+                "timestamp", "label", "confidence", "is_stable",
+                "preprocess_mode", "fps",
+            ],
+        )
+        if write_header:
+            writer.writeheader()
+        writer.writerow({
+            "timestamp": timestamp,
+            "label": label,
+            "confidence": round(confidence, 4),
+            "is_stable": is_stable,
+            "preprocess_mode": preprocess_mode,
+            "fps": round(fps, 2),
+        })
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Main application loop
+# ─────────────────────────────────────────────────────────────────────────────
+
+def run_demo(cfg: InferenceConfig) -> None:
+    """Execute the main webcam inference loop.
+
+    Args:
+        cfg: InferenceConfig instance controlling all runtime parameters.
+    """
+    print("=" * 60)
+    print("  GestureFlow — Real-Time Gesture Recognition")
+    print("=" * 60)
+    print(f"  Checkpoint : {cfg.checkpoint_path}")
+    print(f"  Device     : {cfg.device}")
+    print(f"  Preprocess : {cfg.preprocess_mode.value}")
+    print(f"  Camera     : {cfg.camera_id}")
+    print(f"  Threshold  : {cfg.confidence_threshold:.0%}")
+    print("=" * 60)
+    print("  Press H in the webcam window to toggle keyboard help.")
+    print("=" * 60)
+
+    # ── Initialise modules ──────────────────────────────────────────
+    camera = CameraStream(cfg)
+    camera.start()
+
+    detector = HandDetector(cfg)
+    preprocessor = HandROIPreprocessor(cfg)
+    predictor = GesturePredictor(cfg=cfg)
+    stabilizer = PredictionStabilizer(cfg)
+    renderer = OverlayRenderer()
+
+    # ── Session log ─────────────────────────────────────────────────
+    session_log_path = cfg.output_dir / "session_log.csv"
+
+    # ── Runtime state toggles ────────────────────────────────────────
+    mirror = cfg.mirror_camera
+    show_landmarks = cfg.show_landmarks
+    show_skeleton = cfg.show_skeleton
+    show_bbox = cfg.show_bounding_box
+    show_fps = cfg.show_fps
+    show_telemetry = cfg.show_telemetry
+    paused = cfg.prediction_paused
+    dev_mode = cfg.developer_mode
+
+    current_mode = cfg.preprocess_mode
+
+    # State for the last valid prediction payload
+    last_prediction: Optional[dict] = None
+    last_roi_bgr: Optional[np.ndarray] = None
+    last_gray: Optional[np.ndarray] = None
+    last_tensor: Optional[np.ndarray] = None
+    last_bbox = None
+    last_label = "???"
+    last_confidence = 0.0
+    last_is_stable = False
+    last_mediapipe_ms = 0.0
+
+    cv2.namedWindow(_WIN_MAIN, cv2.WINDOW_NORMAL)
+    cv2.resizeWindow(_WIN_MAIN, cfg.camera_width, cfg.camera_height)
+
+    print("\n  ✓ All modules loaded.  Window should appear shortly.\n")
+
+    try:
+        while True:
+            # ── Read frame ───────────────────────────────────────────
+            frame = camera.read_frame()
+            if frame is None:
+                time.sleep(0.01)
+                continue
+
+            if mirror:
+                frame = cv2.flip(frame, 1)
+
+            loop_start = time.time()
+
+            # ── Hand detection ───────────────────────────────────────
+            mp_start = time.time()
+            detection_result = detector.detect(frame)
+            last_mediapipe_ms = (time.time() - mp_start) * 1000.0
+
+            hand_detected = detection_result["hand_detected"]
+            landmark_list = detection_result.get("landmark_list") or []
+            bbox = detection_result.get("bbox")
+
+            # ── CNN Inference (gated by pause) ───────────────────────
+            if not paused and hand_detected:
+                roi_bgr, padded_bbox = preprocessor.extract_padded_roi(frame, bbox)
+                gray = preprocessor.preprocess_roi(roi_bgr, mode=current_mode)
+                tensor = preprocessor.to_tensor(gray)
+
+                prediction = predictor.predict(tensor)
+
+                raw_label = prediction["predicted_label"]
+                raw_conf = prediction["confidence"]
+
+                stable_label, stable_conf, is_stable = stabilizer.update(raw_label, raw_conf)
+
+                last_label = stable_label
+                last_confidence = stable_conf
+                last_is_stable = is_stable
+                last_prediction = prediction
+                last_roi_bgr = roi_bgr
+                last_gray = gray
+                last_tensor = tensor.cpu().numpy()
+                last_bbox = padded_bbox
+
+                # Session CSV logging
+                _append_session_log(
+                    session_log_path,
+                    timestamp=datetime.now().isoformat(),
+                    label=stable_label,
+                    confidence=stable_conf,
+                    is_stable=is_stable,
+                    preprocess_mode=current_mode.value,
+                    fps=camera.get_fps(),
+                )
+
+            elif not hand_detected:
+                # No hand — clear committed state after a grace period
+                last_is_stable = False
+
+            # ── Render HUD overlays ──────────────────────────────────
+            if show_bbox and last_bbox is not None:
+                renderer.draw_bounding_box(
+                    frame, last_bbox, last_is_stable, last_confidence, show_bbox
+                )
+
+            renderer.draw_landmarks(
+                frame, landmark_list, show_landmarks, show_skeleton
+            )
+
+            renderer.draw_gesture_label(
+                frame, last_label, last_confidence, last_is_stable, paused
+            )
+
+            renderer.draw_telemetry_panel(
+                frame,
+                fps=camera.get_fps(),
+                mediapipe_ms=last_mediapipe_ms,
+                cnn_ms=last_prediction["latency_ms"] if last_prediction else 0.0,
+                preprocess_mode=current_mode.value.upper(),
+                confidence=last_confidence,
+                hand_detected=hand_detected,
+                show_fps=show_fps,
+                show_telemetry=show_telemetry,
+            )
+
+            renderer.draw_prediction_history(
+                frame, stabilizer.get_history(), show_telemetry
+            )
+
+            renderer.draw_keyboard_help(frame, show_telemetry)
+
+            # ── Developer Mode window ────────────────────────────────
+            if dev_mode:
+                renderer.update_developer_window(
+                    roi_bgr=last_roi_bgr,
+                    gray_normalized=last_gray,
+                    tensor_data=last_tensor,
+                    probabilities=last_prediction["probabilities"] if last_prediction else None,
+                    top3=last_prediction["top3"] if last_prediction else None,
+                    class_names=predictor.class_names,
+                    enabled=True,
+                )
+            else:
+                renderer.update_developer_window(
+                    roi_bgr=None, gray_normalized=None, tensor_data=None,
+                    probabilities=None, top3=None, class_names=None,
+                    enabled=False,
+                )
+
+            # ── Display main frame ───────────────────────────────────
+            cv2.imshow(_WIN_MAIN, frame)
+
+            # ── Keyboard handler ─────────────────────────────────────
+            key = cv2.waitKey(1) & 0xFF
+
+            if key == ord("q") or key == ord("Q") or key == 27:  # Q / ESC
+                print("\n  [Q] Quit requested.")
+                break
+
+            elif key == ord("r") or key == ord("R"):  # Reset statistics
+                stabilizer.reset()
+                last_prediction = None
+                last_roi_bgr = None
+                last_gray = None
+                last_tensor = None
+                last_bbox = None
+                last_label = "???"
+                last_confidence = 0.0
+                last_is_stable = False
+                print("  [R] Session statistics reset.")
+
+            elif key == ord("m") or key == ord("M"):  # Mirror
+                mirror = not mirror
+                print(f"  [M] Mirror: {'ON' if mirror else 'OFF'}")
+
+            elif key == ord("l") or key == ord("L"):  # Landmarks
+                show_landmarks = not show_landmarks
+                print(f"  [L] Landmarks: {'ON' if show_landmarks else 'OFF'}")
+
+            elif key == ord("b") or key == ord("B"):  # Bounding box
+                show_bbox = not show_bbox
+                print(f"  [B] Bounding box: {'ON' if show_bbox else 'OFF'}")
+
+            elif key == ord("s") or key == ord("S"):  # Skeleton
+                show_skeleton = not show_skeleton
+                print(f"  [S] Skeleton: {'ON' if show_skeleton else 'OFF'}")
+
+            elif key == ord("f") or key == ord("F"):  # FPS
+                show_fps = not show_fps
+                print(f"  [F] FPS display: {'ON' if show_fps else 'OFF'}")
+
+            elif key == ord("p") or key == ord("P"):  # Pause
+                paused = not paused
+                print(f"  [P] Prediction: {'PAUSED' if paused else 'RESUMED'}")
+
+            elif key == ord("h") or key == ord("H"):  # Hide HUD
+                show_telemetry = not show_telemetry
+                print(f"  [H] Telemetry HUD: {'ON' if show_telemetry else 'OFF'}")
+
+            elif key == ord("d") or key == ord("D"):  # Developer Mode
+                dev_mode = not dev_mode
+                if not dev_mode:
+                    renderer.destroy_developer_window()
+                print(f"  [D] Developer Mode: {'ON' if dev_mode else 'OFF'}")
+
+            elif key == ord("o") or key == ord("O"):  # Debug save
+                _save_debug_bundle(cfg, frame, last_roi_bgr, last_gray, last_prediction)
+
+            elif key == ord("c") or key == ord("C") or key == ord(" "):  # Screenshot
+                _save_screenshot(cfg, frame)
+
+            elif key == ord("1"):  # Gray mode
+                current_mode = PreprocessMode.GRAY
+                stabilizer.reset()
+                print("  [1] Preprocessing mode: GRAY")
+
+            elif key == ord("2"):  # HistEq mode
+                current_mode = PreprocessMode.HIST_EQ
+                stabilizer.reset()
+                print("  [2] Preprocessing mode: HIST_EQ")
+
+            elif key == ord("3"):  # CLAHE mode
+                current_mode = PreprocessMode.CLAHE
+                stabilizer.reset()
+                print("  [3] Preprocessing mode: CLAHE")
+
+    except KeyboardInterrupt:
+        print("\n  Interrupted by Ctrl+C.")
+    finally:
+        print("\n  Releasing camera and destroying windows …")
+        camera.stop()
+        detector.close()
+        cv2.destroyAllWindows()
+
+        # ── Session summary ──────────────────────────────────────────
+        print("\n" + "=" * 60)
+        print("  SESSION SUMMARY")
+        print("=" * 60)
+        print(f"  Total predictions : {stabilizer.total_predictions}")
+        print(f"  Most frequent     : {stabilizer.get_most_frequent_gesture()}")
+        dist = stabilizer.gesture_counts
+        if dist:
+            print("  Gesture counts    :")
+            for lbl, cnt in dist.most_common():
+                print(f"    {lbl:<22s} {cnt:>5d}")
+        print(f"  Session log       : {session_log_path}")
+        print("=" * 60)
+        print("  GestureFlow exited cleanly.")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Entry point
+# ─────────────────────────────────────────────────────────────────────────────
+
+def main() -> None:
+    """CLI entry point: parse args, patch config, start demo."""
+    args = _parse_args()
+
+    cfg = inference_config
+    cfg.camera_id = args.camera
+    cfg.mirror_camera = not args.no_mirror
+    cfg.preprocess_mode = _MODE_MAP[args.mode]
+    cfg.developer_mode = args.dev
+    cfg.confidence_threshold = args.confidence
+    cfg.prediction_window_size = args.window
+
+    run_demo(cfg)
+
+
+if __name__ == "__main__":
+    main()
