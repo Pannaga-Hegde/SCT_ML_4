@@ -1,0 +1,1563 @@
+{
+  "exact_duplicate_hashes_count": 388,
+  "duplicate_filenames_count": 0,
+  "exact_duplicate_clusters": {
+    "8ce3a26edbb95410f7dfb19ab1db41f75dd9d02f6ed43abe8169383db033c648": [
+      "00\\01_palm\\frame_00_01_0002.png",
+      "00\\01_palm\\frame_00_01_0003.png"
+    ],
+    "ea326e4a38faa248b4f943073e41ded63f1db765ad127bf0a9454411e6412fea": [
+      "00\\01_palm\\frame_00_01_0004.png",
+      "00\\01_palm\\frame_00_01_0005.png"
+    ],
+    "18ea552cb87bb0cefd1cd77d85c59248506b74700d26d3adb33c07c439601695": [
+      "00\\01_palm\\frame_00_01_0006.png",
+      "00\\01_palm\\frame_00_01_0007.png"
+    ],
+    "7a1122e21c9b5409f8524c3904bb0afa9eb7fb5d825a6bfac2fe4e9251ea9ae2": [
+      "00\\01_palm\\frame_00_01_0008.png",
+      "00\\01_palm\\frame_00_01_0009.png"
+    ],
+    "6b1966eac11081bfdde49406d7a51f81ac46505f8934ce4ccd4428e2d093bfc0": [
+      "00\\01_palm\\frame_00_01_0012.png",
+      "00\\01_palm\\frame_00_01_0013.png"
+    ],
+    "1000c4e7ed2f8f63364ea8bb326e67317420f1e9ed5c60166d27d3354389982a": [
+      "00\\01_palm\\frame_00_01_0014.png",
+      "00\\01_palm\\frame_00_01_0015.png"
+    ],
+    "bd1d0810c68efceed497c7233e60c2563ee50bb2a18e8df7c049e830c73854fd": [
+      "00\\03_fist\\frame_00_03_0149.png",
+      "00\\03_fist\\frame_00_03_0150.png"
+    ],
+    "01e54db7d5dcfd05257d4f38618cd8ef8b9ac850a4e0de7855bad665afbce3be": [
+      "00\\05_thumb\\frame_00_05_0137.png",
+      "00\\05_thumb\\frame_00_05_0138.png"
+    ],
+    "2986e1357bd89fddd5e3095345f53ed10230c728f229c0d3e93ad445ca71711d": [
+      "00\\01_palm\\frame_00_01_0076.png",
+      "00\\01_palm\\frame_00_01_0077.png"
+    ],
+    "784a0d6cb515ceafc674e6bf0c9e843e35de3170a1c716a4175dcc3491dc108f": [
+      "00\\01_palm\\frame_00_01_0030.png",
+      "00\\01_palm\\frame_00_01_0031.png"
+    ],
+    "53879becb35af7784a6aef251c66ffae2c1fac60ce7992726aaca8df7955ad11": [
+      "00\\01_palm\\frame_00_01_0032.png",
+      "00\\01_palm\\frame_00_01_0033.png"
+    ],
+    "63bfff3fbfe7651f0b83cf9c9d736908853266a1bf45aaa8c3c4aa33b2ed0692": [
+      "00\\01_palm\\frame_00_01_0036.png",
+      "00\\01_palm\\frame_00_01_0037.png"
+    ],
+    "469ab63fd21d6d28f9cb5cc7e3280d5a6bdff9612b7546ca615544afc04f195d": [
+      "00\\01_palm\\frame_00_01_0038.png",
+      "00\\01_palm\\frame_00_01_0039.png"
+    ],
+    "273cf91fd3c58872e88a8437bb3c0461f5550fc679e302e890737b2b6d07b766": [
+      "00\\01_palm\\frame_00_01_0050.png",
+      "00\\01_palm\\frame_00_01_0051.png"
+    ],
+    "16a2a7bd5342e64cb2b6a03020c71168da54ae84d983e45b380b7181509d4947": [
+      "00\\01_palm\\frame_00_01_0052.png",
+      "00\\01_palm\\frame_00_01_0053.png"
+    ],
+    "a3fb9064db3177fedc7f1d2b1dafbce19898faca48b779b40ef9e5592b30c91b": [
+      "00\\01_palm\\frame_00_01_0056.png",
+      "00\\01_palm\\frame_00_01_0057.png"
+    ],
+    "f8e135c3e58ad508201ad56b52f5a6f61ade34259bdbd217c2fc928edea37b3d": [
+      "00\\01_palm\\frame_00_01_0058.png",
+      "00\\01_palm\\frame_00_01_0059.png"
+    ],
+    "b33201ce6e71b4f286f581557ab51dcfbffeac359e6e900d9018c16c641bceee": [
+      "00\\01_palm\\frame_00_01_0062.png",
+      "00\\01_palm\\frame_00_01_0063.png"
+    ],
+    "719f562b0d4ee609a5ee6849b76cb780583c9103d8fd4178f4ac4fecdf335c5e": [
+      "00\\01_palm\\frame_00_01_0064.png",
+      "00\\01_palm\\frame_00_01_0065.png"
+    ],
+    "84d7eebdc0509c5d9a2949dff3fdae63cdf8ee2cf95d0c45c2610a472a28ba9c": [
+      "00\\01_palm\\frame_00_01_0068.png",
+      "00\\01_palm\\frame_00_01_0069.png"
+    ],
+    "1a2309d28d71efbe1ab4f20dfe668713f009b9d673dc5deacba7ea449d2c8219": [
+      "00\\01_palm\\frame_00_01_0070.png",
+      "00\\01_palm\\frame_00_01_0071.png"
+    ],
+    "d45aba393ce83366072f760d5fc2864f384241caad60a5a5b8e7d577cb01b8ea": [
+      "00\\01_palm\\frame_00_01_0078.png",
+      "00\\01_palm\\frame_00_01_0079.png"
+    ],
+    "03aa2f336672df6066c88d806f8865fc2946277d937be2cd231825f13d8914de": [
+      "00\\01_palm\\frame_00_01_0090.png",
+      "00\\01_palm\\frame_00_01_0091.png"
+    ],
+    "acb7b2d01e91695d540bd4ad2a69df96048ad598feade9acb8a8542282d7ad79": [
+      "00\\01_palm\\frame_00_01_0088.png",
+      "00\\01_palm\\frame_00_01_0089.png"
+    ],
+    "91833b5c9577faeb891850bab27d0b9d30016d2ee76cf6fad5922a142cb63313": [
+      "00\\01_palm\\frame_00_01_0096.png",
+      "00\\01_palm\\frame_00_01_0097.png"
+    ],
+    "a4aef6e040f6b87fdfc345ca62a432b069065fe68f8d7fe7ed8035653a0878f0": [
+      "00\\01_palm\\frame_00_01_0098.png",
+      "00\\01_palm\\frame_00_01_0099.png"
+    ],
+    "c7dc9641651c5f10c22efc468c5f59bc8310c99ca6a9270e116a5a91e2eaa589": [
+      "00\\01_palm\\frame_00_01_0112.png",
+      "00\\01_palm\\frame_00_01_0113.png"
+    ],
+    "82ebbb2456228498750902e52e20b1e2beed8a92b36e11fa824d2e3b66f5e295": [
+      "00\\01_palm\\frame_00_01_0114.png",
+      "00\\01_palm\\frame_00_01_0115.png"
+    ],
+    "7d540411e1438aa8201585278ca6d72da1a20daf3d3198057cae0cda33f1d270": [
+      "00\\01_palm\\frame_00_01_0170.png",
+      "00\\01_palm\\frame_00_01_0171.png"
+    ],
+    "9658fe0199159f44c0ba04910b5bf4204e51f44e1127cd7853eb7f17b2a283c4": [
+      "00\\01_palm\\frame_00_01_0160.png",
+      "00\\01_palm\\frame_00_01_0161.png"
+    ],
+    "8abbf64116576d6d9d94282476955fcccb79ac6a37170b6c9782ed0f45cb6858": [
+      "00\\01_palm\\frame_00_01_0120.png",
+      "00\\01_palm\\frame_00_01_0121.png"
+    ],
+    "2d66027dcaffdbd3b8a69ad1fcc3b5d6315f4bd9784c0b7e9ec1adf27e52d8e3": [
+      "00\\01_palm\\frame_00_01_0122.png",
+      "00\\01_palm\\frame_00_01_0123.png"
+    ],
+    "4c4159c8c33b43d4ba30371f93549fdc6c7e1441b23a0a8a31685249a8d397ee": [
+      "00\\01_palm\\frame_00_01_0130.png",
+      "00\\01_palm\\frame_00_01_0131.png"
+    ],
+    "34180db5428969f9b10b0041cc9eb821ee32f95fcc93753417a3670dcc271846": [
+      "00\\01_palm\\frame_00_01_0132.png",
+      "00\\01_palm\\frame_00_01_0133.png"
+    ],
+    "88c324372dbe51dfe3e3645a7756f90edebe1200453b173ddb5f4ad289c67074": [
+      "00\\01_palm\\frame_00_01_0138.png",
+      "00\\01_palm\\frame_00_01_0139.png"
+    ],
+    "2f62886585266ca4f59ec740d6d166a48d9f6e67219c25465633db358a43d19e": [
+      "00\\01_palm\\frame_00_01_0140.png",
+      "00\\01_palm\\frame_00_01_0141.png"
+    ],
+    "b70983f6b251398c1a10a4ce9da00a4ebc6abf24976d9d615e507bf094f20dca": [
+      "00\\01_palm\\frame_00_01_0144.png",
+      "00\\01_palm\\frame_00_01_0145.png"
+    ],
+    "53b763fe76620a4c3b8b9fa3b4bcd6ed425e74ce7d4a2d5a3ef9b407515815ea": [
+      "00\\01_palm\\frame_00_01_0146.png",
+      "00\\01_palm\\frame_00_01_0147.png"
+    ],
+    "15e08e46a777545ddf5f8f78abedef64ddab4d4849ec3e32b46beb07abef48cc": [
+      "00\\01_palm\\frame_00_01_0150.png",
+      "00\\01_palm\\frame_00_01_0151.png"
+    ],
+    "2dc9bf941773691fc747baf39df933d199ff973e0bfb6705e9bf22ba338bab65": [
+      "00\\01_palm\\frame_00_01_0152.png",
+      "00\\01_palm\\frame_00_01_0153.png"
+    ],
+    "823918b4b9d650b2f05998e0f72e3f5bd08738afc63e6daf813ef9ca74b52cb3": [
+      "00\\05_thumb\\frame_00_05_0171.png",
+      "00\\05_thumb\\frame_00_05_0172.png"
+    ],
+    "bbcf1e58389bf8ee9e13cd086822b620ff16c62a92fe4ff5b4cdec8475360839": [
+      "00\\01_palm\\frame_00_01_0162.png",
+      "00\\01_palm\\frame_00_01_0163.png"
+    ],
+    "8c201723dabc3a689822716c1319ed3e21f86886975e2c13e98978e1f5c0f8ff": [
+      "00\\03_fist\\frame_00_03_0003.png",
+      "00\\03_fist\\frame_00_03_0004.png"
+    ],
+    "cf81b2dcf412be549acc6dafed80d4735c0f04f2e43c4729571854967515c91b": [
+      "00\\01_palm\\frame_00_01_0168.png",
+      "00\\01_palm\\frame_00_01_0169.png"
+    ],
+    "5a3a47ac9ba1e60bdad03928975b2f58ef52d6cfcad5a4fcc70fc0e00f117f7f": [
+      "00\\01_palm\\frame_00_01_0188.png",
+      "00\\01_palm\\frame_00_01_0189.png"
+    ],
+    "41d02f75f0c77974fef331327d01fcada9faf322532bf64e99191aba64128a8a": [
+      "00\\01_palm\\frame_00_01_0186.png",
+      "00\\01_palm\\frame_00_01_0187.png"
+    ],
+    "8393dc6d1fae2baedf7d321e54e6d4a52130a04894c15b5f1498f46aec87dae6": [
+      "00\\05_thumb\\frame_00_05_0111.png",
+      "00\\05_thumb\\frame_00_05_0112.png"
+    ],
+    "a01a2637d3fb611a65a973d1fd5e5652c184b7ce868a3b258dcc9f659981f249": [
+      "00\\08_palm_moved\\frame_00_08_0055.png",
+      "00\\08_palm_moved\\frame_00_08_0056.png"
+    ],
+    "277a0b36ad8bc5a6fbce5a3059b59d487aea7b4b297fe70751ef5ceda615f9bf": [
+      "00\\08_palm_moved\\frame_00_08_0137.png",
+      "00\\08_palm_moved\\frame_00_08_0138.png"
+    ],
+    "65b3e3c323d39d0535831259c2d384e5c6e38aa8c7809a721db207c23e4d2cd6": [
+      "00\\09_c\\frame_00_09_0139.png",
+      "00\\09_c\\frame_00_09_0140.png"
+    ],
+    "bde07dfeb8e655e3a4391ba05d37565f67f4ca5e544376c64ecd35936fce3e07": [
+      "00\\02_l\\frame_00_02_0093.png",
+      "00\\02_l\\frame_00_02_0094.png"
+    ],
+    "71c77df9718a869c24e2f26cadafbe939cc8cac9f1a6f3f82cfc73e622060026": [
+      "00\\02_l\\frame_00_02_0023.png",
+      "00\\02_l\\frame_00_02_0024.png"
+    ],
+    "a5a3cce68f0e5332de7685be2e779f6d0fc5e275bc0387dfc1556285c4b128b6": [
+      "00\\02_l\\frame_00_02_0025.png",
+      "00\\02_l\\frame_00_02_0026.png"
+    ],
+    "33438099c96dd67778d9be330e24aa045ad4d7915fd540a8eb5e21e57ee14343": [
+      "00\\02_l\\frame_00_02_0039.png",
+      "00\\02_l\\frame_00_02_0040.png"
+    ],
+    "28586cb7510878ab319b64975523b8fe962e33da9f8b73dda6704388e478bd37": [
+      "00\\02_l\\frame_00_02_0041.png",
+      "00\\02_l\\frame_00_02_0042.png"
+    ],
+    "2ae61c1390db34faaf083869ee47add6e0c7cfde20fab55691eb4695f76d4134": [
+      "00\\08_palm_moved\\frame_00_08_0019.png",
+      "00\\08_palm_moved\\frame_00_08_0020.png"
+    ],
+    "327b8fa6af9c6c8d0bb0faea52356aa3d5a52f465f1af5fc90653fafe5f54c64": [
+      "00\\03_fist\\frame_00_03_0199.png",
+      "00\\03_fist\\frame_00_03_0200.png"
+    ],
+    "be54036f880e1e310d5bb8f259b34d62bca7c85fdd2b2d9c48321147c3938491": [
+      "00\\02_l\\frame_00_02_0053.png",
+      "00\\02_l\\frame_00_02_0054.png"
+    ],
+    "8c1d5682afc53790f4372d554c3d013c3e9335a2477a115ae5922d73b6dbf606": [
+      "00\\02_l\\frame_00_02_0055.png",
+      "00\\02_l\\frame_00_02_0056.png"
+    ],
+    "a7169d0baefee7d4b2cfabdf1f175a658d1748c955652602787bc76259228037": [
+      "00\\09_c\\frame_00_09_0167.png",
+      "00\\09_c\\frame_00_09_0168.png"
+    ],
+    "83f4df1b29018c77b6856fd46a1392a41f6fffc4f203a9c766aebc6641570298": [
+      "00\\09_c\\frame_00_09_0087.png",
+      "00\\09_c\\frame_00_09_0088.png"
+    ],
+    "ae1d54dbbd2e4542ded11888d46c4f737127439e2208925ea4cb4ee87ba1f66c": [
+      "00\\02_l\\frame_00_02_0077.png",
+      "00\\02_l\\frame_00_02_0078.png"
+    ],
+    "336aa43ed8e8d4f4142f6883d7251bcacba813dd3b3e875f4ca7d57229a08216": [
+      "00\\02_l\\frame_00_02_0079.png",
+      "00\\02_l\\frame_00_02_0080.png"
+    ],
+    "addab02a81be4f154094fccfdfb75b7bc81ce345766f94ea0f0b214a8f592752": [
+      "00\\09_c\\frame_00_09_0033.png",
+      "00\\09_c\\frame_00_09_0034.png"
+    ],
+    "85363df3e7befba7135f1f662059531f96b0ca5b7094590c8149cf3b7d218288": [
+      "00\\02_l\\frame_00_02_0125.png",
+      "00\\02_l\\frame_00_02_0126.png"
+    ],
+    "41c27759e78e255c3a34ca89071e470a49a04c8155459bde46a60e3caa191d01": [
+      "00\\02_l\\frame_00_02_0095.png",
+      "00\\02_l\\frame_00_02_0096.png"
+    ],
+    "0a1fd9549a7460cfcbedf04f8dc23cf6835dd29ff695ff53b664509ce4577e0f": [
+      "00\\03_fist\\frame_00_03_0107.png",
+      "00\\03_fist\\frame_00_03_0108.png"
+    ],
+    "5dc97939cfdb52579eb9f153db0da23131c98823018ac24aed2517d5f476dcc2": [
+      "00\\02_l\\frame_00_02_0127.png",
+      "00\\02_l\\frame_00_02_0128.png"
+    ],
+    "329c730378315fd9792c569c45f37eaac46e5b77850a0b4d18425758cbfb8719": [
+      "00\\02_l\\frame_00_02_0141.png",
+      "00\\02_l\\frame_00_02_0142.png"
+    ],
+    "4e23057e889781fab296c11e33b4531d247a7bea99e1e1657979a75b796eebd7": [
+      "00\\02_l\\frame_00_02_0143.png",
+      "00\\02_l\\frame_00_02_0144.png"
+    ],
+    "b328b5889e662d6e602651921de2c9a28b11af734d4f30c3f76ca119e9c66350": [
+      "00\\03_fist\\frame_00_03_0073.png",
+      "00\\03_fist\\frame_00_03_0074.png"
+    ],
+    "ccd98a171812db2668b59bbc997be96f020c712d5cfba96efe9fcc41a65b7edb": [
+      "00\\03_fist\\frame_00_03_0001.png",
+      "00\\03_fist\\frame_00_03_0002.png"
+    ],
+    "8d538c5ade6170d06ca47cfa5932ea783bb5e1351c3552723c9f44be920eb2ce": [
+      "00\\03_fist\\frame_00_03_0177.png",
+      "00\\03_fist\\frame_00_03_0178.png"
+    ],
+    "a203297f91e0d313fd16b8f2e3ac48aa8fee25c0e2b573033e58b06b735e630c": [
+      "00\\03_fist\\frame_00_03_0079.png",
+      "00\\03_fist\\frame_00_03_0080.png"
+    ],
+    "4f0028dbeaea1822586a7e28d3215f19e94ca9d5aa52a349c031579467695af3": [
+      "00\\08_palm_moved\\frame_00_08_0103.png",
+      "00\\08_palm_moved\\frame_00_08_0104.png"
+    ],
+    "cc2489dce9064bbe59290ee1b79d69e4888df9af3e9e45197f3876cd112bf26d": [
+      "00\\05_thumb\\frame_00_05_0077.png",
+      "00\\05_thumb\\frame_00_05_0078.png"
+    ],
+    "aa50578b54e82a725c64ce61e86e0bb572b12ed5027088563d84557649cfd9fb": [
+      "00\\03_fist\\frame_00_03_0015.png",
+      "00\\03_fist\\frame_00_03_0016.png"
+    ],
+    "cb47849a89bbebca8e86aa947e1b73eec0b30a55a97d10ffe52ea77c2033ce47": [
+      "00\\03_fist\\frame_00_03_0017.png",
+      "00\\03_fist\\frame_00_03_0018.png"
+    ],
+    "4c05b0426f10188726b2cb7ab79298b32f021668394eee12c010f72913ef6d18": [
+      "00\\03_fist\\frame_00_03_0021.png",
+      "00\\03_fist\\frame_00_03_0022.png"
+    ],
+    "640f35e096ffd7c643879d5fcc245eef8ee0111838bb15baf8c68a25fdc51abb": [
+      "00\\03_fist\\frame_00_03_0023.png",
+      "00\\03_fist\\frame_00_03_0024.png"
+    ],
+    "066c37a19ed9fbf36b26e24c7bbfeea5313777927469d4598a9eba052ff59caf": [
+      "00\\03_fist\\frame_00_03_0031.png",
+      "00\\03_fist\\frame_00_03_0032.png"
+    ],
+    "f691ec4139d73377ea8643b5743f6854da41ed294c7c24698cc91fe4849689fa": [
+      "00\\03_fist\\frame_00_03_0037.png",
+      "00\\03_fist\\frame_00_03_0038.png"
+    ],
+    "774451a8366e5954cc3c96bba57552e005841e045dac9276bfb7888a5d464846": [
+      "00\\03_fist\\frame_00_03_0033.png",
+      "00\\03_fist\\frame_00_03_0034.png"
+    ],
+    "3193d48351eb212008c3927b9af5576a152af9dcb49b78595ca7d14462f53264": [
+      "00\\03_fist\\frame_00_03_0039.png",
+      "00\\03_fist\\frame_00_03_0040.png"
+    ],
+    "eaf3be7fa0462642f3af98edaadc44badf3393848fe079ec1428ed12c8b10bc9": [
+      "00\\08_palm_moved\\frame_00_08_0139.png",
+      "00\\08_palm_moved\\frame_00_08_0140.png"
+    ],
+    "f80fe7a70713409b5ef2a6c6445bccb0161eb0090e10bfeff4b62ea82d646373": [
+      "00\\03_fist\\frame_00_03_0047.png",
+      "00\\03_fist\\frame_00_03_0048.png"
+    ],
+    "e0fe7ae7c2ebb26917d65d1ce45cbdf189de0e23d9dac2f85b68c1c397c11776": [
+      "00\\03_fist\\frame_00_03_0049.png",
+      "00\\03_fist\\frame_00_03_0050.png"
+    ],
+    "043e92ab4dd0d37b8ceefe5f27acc8fe6e1b1c2264c01143f6112003b7ec9cc4": [
+      "00\\03_fist\\frame_00_03_0105.png",
+      "00\\03_fist\\frame_00_03_0106.png"
+    ],
+    "c43ea6e9ae34d90cb271e0bc19e91a565349034a2048d31005fa0483adc30c61": [
+      "00\\03_fist\\frame_00_03_0053.png",
+      "00\\03_fist\\frame_00_03_0054.png"
+    ],
+    "e09dfab102e2a048b6b7cf69152ea0624e3ec5e6ec0b30d95cb2b88011bf6b98": [
+      "00\\03_fist\\frame_00_03_0055.png",
+      "00\\03_fist\\frame_00_03_0056.png"
+    ],
+    "99719fdda14e167e2620537415946dfeedabd4a74fc6464e3a22f5863ac9bd40": [
+      "00\\03_fist\\frame_00_03_0099.png",
+      "00\\03_fist\\frame_00_03_0100.png"
+    ],
+    "f866627b27cd4c105b6e856c49452eecbb08db9502ba7b4214f69b862cab8db6": [
+      "00\\03_fist\\frame_00_03_0061.png",
+      "00\\03_fist\\frame_00_03_0062.png"
+    ],
+    "3b631f95e5bb7e0197201bb163b1a2153a1d5d6580472aa0323a3d7832ff75cb": [
+      "00\\03_fist\\frame_00_03_0063.png",
+      "00\\03_fist\\frame_00_03_0064.png"
+    ],
+    "8f90959dba24233cf5ad04462d84a9c49f9874013bd0ee354bf2fc326f502386": [
+      "00\\03_fist\\frame_00_03_0067.png",
+      "00\\03_fist\\frame_00_03_0068.png"
+    ],
+    "3a06ac9c1b7e7a0398da6fb75fa13533e1e44af92db63123cd8d314eb8f892df": [
+      "00\\03_fist\\frame_00_03_0069.png",
+      "00\\03_fist\\frame_00_03_0070.png"
+    ],
+    "9871f1a04d8142025c6643892428a20c0c3ff9e465122ec5eb0d4a03e03e5cd3": [
+      "00\\03_fist\\frame_00_03_0071.png",
+      "00\\03_fist\\frame_00_03_0072.png"
+    ],
+    "9e9ce11d598a554889ff404dd85d5fa445a3989d04101d67daa19848c68a7894": [
+      "00\\03_fist\\frame_00_03_0077.png",
+      "00\\03_fist\\frame_00_03_0078.png"
+    ],
+    "2f128be995ed06aa13334ee8bc74a7a528cb349b7c39d9da37d1c0b0bc2c5f32": [
+      "00\\03_fist\\frame_00_03_0083.png",
+      "00\\03_fist\\frame_00_03_0084.png"
+    ],
+    "0f973dd750e2be4265ceaedf5db086d77e75c20a1368da3a2805840c8339c063": [
+      "00\\09_c\\frame_00_09_0117.png",
+      "00\\09_c\\frame_00_09_0118.png"
+    ],
+    "e4d1bfea85e4d19270efaba8281e5f30e920c7ba2944ed83914104f3d4427c9a": [
+      "00\\03_fist\\frame_00_03_0085.png",
+      "00\\03_fist\\frame_00_03_0086.png"
+    ],
+    "e2876e78e20348a6d87652c9126d15a7e704fbbdbb8e1637ffd32bcb925daab4": [
+      "00\\08_palm_moved\\frame_00_08_0191.png",
+      "00\\08_palm_moved\\frame_00_08_0192.png"
+    ],
+    "4186493708d17ab487f367a6b2fa7463f109d9c7d3afd24481345b8d383901df": [
+      "00\\03_fist\\frame_00_03_0089.png",
+      "00\\03_fist\\frame_00_03_0090.png"
+    ],
+    "1316208453bdef7f44f30ddad767be751d1e05b8c8d70180d78fa85b293cef12": [
+      "00\\03_fist\\frame_00_03_0091.png",
+      "00\\03_fist\\frame_00_03_0092.png"
+    ],
+    "340f18d6486a289901f70eda8d4df646abfd632ec929bab04cf6a280382a084d": [
+      "08\\03_fist\\frame_08_03_0064.png",
+      "08\\03_fist\\frame_08_03_0065.png"
+    ],
+    "6c41b9ee41d29ca5cfd275c82b2eca119b5d20c9bd663d0dd1af9a2fb6c8ac85": [
+      "00\\08_palm_moved\\frame_00_08_0095.png",
+      "00\\08_palm_moved\\frame_00_08_0096.png"
+    ],
+    "77642c371defe5a99160d9e7eeef9307055043ecfda8e39a670f820358562bc7": [
+      "00\\08_palm_moved\\frame_00_08_0173.png",
+      "00\\08_palm_moved\\frame_00_08_0174.png"
+    ],
+    "e3b52a646561177917ff014c2251f8e37e5a0e2cd42fe477988df6bff353a1c5": [
+      "00\\03_fist\\frame_00_03_0097.png",
+      "00\\03_fist\\frame_00_03_0098.png"
+    ],
+    "bb40c7ca4e6c2efeb94141cb27470f78f9096b1b0c1e34f351e16ab645e9e76c": [
+      "00\\03_fist\\frame_00_03_0101.png",
+      "00\\03_fist\\frame_00_03_0102.png"
+    ],
+    "8b1fd217cedbb3467295015f8bd13f20dbec7ede8dd75be73d46dc3edc240482": [
+      "00\\03_fist\\frame_00_03_0103.png",
+      "00\\03_fist\\frame_00_03_0104.png"
+    ],
+    "4145251609a8a2374a64dc0e442dfd1ec30fe0f5e2c5e08f61f637bd5159005a": [
+      "08\\03_fist\\frame_08_03_0013.png",
+      "08\\03_fist\\frame_08_03_0014.png"
+    ],
+    "2b3b854247d767b9b50022cb416628c3f95e2235c1bdfdc3bee01f4938c1c34b": [
+      "00\\03_fist\\frame_00_03_0117.png",
+      "00\\03_fist\\frame_00_03_0118.png"
+    ],
+    "0e1233ee6635cf941b180aed4b7272d993443c174f959baf1fcbace4a3af4b21": [
+      "00\\03_fist\\frame_00_03_0113.png",
+      "00\\03_fist\\frame_00_03_0114.png"
+    ],
+    "04bd8e6c2a33d79ac8cfbf179d177c6518017cc4a75084487ce4c5de145ac22d": [
+      "00\\09_c\\frame_00_09_0017.png",
+      "00\\09_c\\frame_00_09_0018.png"
+    ],
+    "b7e91c278d99bdc7e625589fe4168e67ed299366c38ab8aec8f7d0ec698a88ad": [
+      "00\\03_fist\\frame_00_03_0115.png",
+      "00\\03_fist\\frame_00_03_0116.png"
+    ],
+    "c9cb0635ad66ed01a7bf3d0a74ee403b95cf3b901ee04a20a190189e54fb7e40": [
+      "00\\05_thumb\\frame_00_05_0087.png",
+      "00\\05_thumb\\frame_00_05_0088.png"
+    ],
+    "c633be6b34ca4fc408d452918c5fe38a2af46d6f7e48bb8ef52b479d995ba442": [
+      "00\\03_fist\\frame_00_03_0119.png",
+      "00\\03_fist\\frame_00_03_0120.png"
+    ],
+    "75cd034ca8e2609180da06ea5864061bdbc90205a2b6ba7ae852d1ed7782b171": [
+      "00\\03_fist\\frame_00_03_0121.png",
+      "00\\03_fist\\frame_00_03_0122.png"
+    ],
+    "bdb50a067a7032cd66320f6446ed337def3643da832d07bd12e8725c141ddd93": [
+      "00\\03_fist\\frame_00_03_0123.png",
+      "00\\03_fist\\frame_00_03_0124.png"
+    ],
+    "8e3aeea021fd32a69d5b2ecbe0d9a2956f40301206950b17dd1ba09dd2ae050d": [
+      "00\\03_fist\\frame_00_03_0127.png",
+      "00\\03_fist\\frame_00_03_0128.png"
+    ],
+    "7a7ce321f940942b0b1c4bf99624610396951f7283330323aca1592939f97bb9": [
+      "00\\09_c\\frame_00_09_0143.png",
+      "00\\09_c\\frame_00_09_0144.png"
+    ],
+    "c9a33d0a8f1aacdf421229d515901feacf02e941ef80b6b6dc34b6ae993eaf6e": [
+      "00\\03_fist\\frame_00_03_0129.png",
+      "00\\03_fist\\frame_00_03_0130.png"
+    ],
+    "24fde19092dff35373223ed5f76a5551eaa60c5b61b804567a5e60782696af46": [
+      "00\\09_c\\frame_00_09_0089.png",
+      "00\\09_c\\frame_00_09_0090.png"
+    ],
+    "b9bc271a7f9ec62f763e98e1fe125458282ea901e3f8572859f9de9e1e852137": [
+      "00\\03_fist\\frame_00_03_0147.png",
+      "00\\03_fist\\frame_00_03_0148.png"
+    ],
+    "15ad8302ea0d01c32b23c7423bb41a94838f007ecd06d791a799a0e3f9de53fe": [
+      "00\\03_fist\\frame_00_03_0143.png",
+      "00\\03_fist\\frame_00_03_0144.png"
+    ],
+    "90f18b5cf8f835211164ae41537b0c03060a85938bce8ed792e57cfe6be57873": [
+      "00\\03_fist\\frame_00_03_0145.png",
+      "00\\03_fist\\frame_00_03_0146.png"
+    ],
+    "928e8d7be29a34856794255f8f692f1fdc5cf0161af7783897a4995502d4e0ea": [
+      "00\\03_fist\\frame_00_03_0151.png",
+      "00\\03_fist\\frame_00_03_0152.png"
+    ],
+    "7d823bf8011cfe1ccf15a5c1afb29d124d77ea0c02ca38b97e73630196d24198": [
+      "00\\03_fist\\frame_00_03_0153.png",
+      "00\\03_fist\\frame_00_03_0154.png"
+    ],
+    "3568dd66bdd636b52d910ef442cbb5800cb460dff8d1eac70a9ebfe7e181cd76": [
+      "00\\03_fist\\frame_00_03_0159.png",
+      "00\\03_fist\\frame_00_03_0160.png"
+    ],
+    "980acc3f6728c02547f6081e0d1f603d7a80e5b13f0a5b093da477e3ee886098": [
+      "00\\03_fist\\frame_00_03_0161.png",
+      "00\\03_fist\\frame_00_03_0162.png"
+    ],
+    "69e48a4b7fd6e11d7ab16775353e6001c62ecd339e2d7e2aa2ad698197cb1643": [
+      "00\\08_palm_moved\\frame_00_08_0119.png",
+      "00\\08_palm_moved\\frame_00_08_0120.png"
+    ],
+    "4f4ddaca1d6f56b5618fcf28b375e0291e5783450cbca9e92ef490d3271a65e0": [
+      "00\\03_fist\\frame_00_03_0169.png",
+      "00\\03_fist\\frame_00_03_0170.png"
+    ],
+    "57edfa8609e385783cb157a4566954825e81414330ebc8a21341969f98d93554": [
+      "00\\03_fist\\frame_00_03_0171.png",
+      "00\\03_fist\\frame_00_03_0172.png"
+    ],
+    "9bc10611f7c26873c5a9e44a9c91d7627d609661e37d55d4964ed689a5841ca6": [
+      "00\\03_fist\\frame_00_03_0175.png",
+      "00\\03_fist\\frame_00_03_0176.png"
+    ],
+    "27dd57fe3287674fe3388ed886dc92b7b2f2d960567687543d6da76e78f5ff76": [
+      "00\\08_palm_moved\\frame_00_08_0183.png",
+      "00\\08_palm_moved\\frame_00_08_0184.png"
+    ],
+    "be7c4b622ee496f6cfdfdd6fb7209b654dcd29447acc6be454c7511c22aa8c07": [
+      "00\\03_fist\\frame_00_03_0183.png",
+      "00\\03_fist\\frame_00_03_0184.png"
+    ],
+    "403e7b4a273fd0ff009fc9070ac573abfa013ee72dd6d0c07764ab1dba0ceb53": [
+      "00\\03_fist\\frame_00_03_0185.png",
+      "00\\03_fist\\frame_00_03_0186.png"
+    ],
+    "3bb22084deb2c0a0b63cc90a037eaad4e10441caae7eb4d1043b05d3b28f23e3": [
+      "00\\03_fist\\frame_00_03_0191.png",
+      "00\\03_fist\\frame_00_03_0192.png"
+    ],
+    "287b419f17d4e3970625b21995fd76217976c0a9184d6568a9ce4ef718a9fa53": [
+      "00\\03_fist\\frame_00_03_0193.png",
+      "00\\03_fist\\frame_00_03_0194.png"
+    ],
+    "77a73c20fdfc17bd0eecf531610aff03f05b18b16024f09456afc2898f673646": [
+      "00\\03_fist\\frame_00_03_0197.png",
+      "00\\03_fist\\frame_00_03_0198.png"
+    ],
+    "6d2df177e447bd41566fabf1ec3232af31762620f38b37de069bdd414f938c22": [
+      "00\\09_c\\frame_00_09_0055.png",
+      "00\\09_c\\frame_00_09_0056.png"
+    ],
+    "ad9e636e3da5d5c902b35fa0fa3a36174cef6de05a99cff26a197b979cb2265b": [
+      "00\\09_c\\frame_00_09_0047.png",
+      "00\\09_c\\frame_00_09_0048.png"
+    ],
+    "83bfd0d323a609406739b8ce8862411e7e81f15338b1fdedaceebeaacbfca642": [
+      "00\\08_palm_moved\\frame_00_08_0181.png",
+      "00\\08_palm_moved\\frame_00_08_0182.png"
+    ],
+    "cadb6a7457bdc1b9e73ef947287b883421959a7e6f3c8fb8e46a8129f4b7e2af": [
+      "00\\08_palm_moved\\frame_00_08_0189.png",
+      "00\\08_palm_moved\\frame_00_08_0190.png"
+    ],
+    "3c809c31222f6628d1352d31d98c4fad59f71b2b366aef2551cfe67f4f7f9a89": [
+      "00\\08_palm_moved\\frame_00_08_0171.png",
+      "00\\08_palm_moved\\frame_00_08_0172.png"
+    ],
+    "e4f0513aeee1f9d7de08b177907d3f8c533bbfa7136d9a82c898f3da74d5d426": [
+      "00\\05_thumb\\frame_00_05_0059.png",
+      "00\\05_thumb\\frame_00_05_0060.png"
+    ],
+    "3c17f89295786d698a4bba42a11bc99d1a0c811da5f8156e4421559483f51419": [
+      "00\\08_palm_moved\\frame_00_08_0163.png",
+      "00\\08_palm_moved\\frame_00_08_0164.png"
+    ],
+    "58097bbea5dbd90757013f8b0490a460d3ad3c2af5916212e00649e969ad7845": [
+      "00\\09_c\\frame_00_09_0165.png",
+      "00\\09_c\\frame_00_09_0166.png"
+    ],
+    "b98e29237708836fa9ca9f0d777928b4f6dbc9af7d5658fa65c41c6d95a45fc2": [
+      "00\\05_thumb\\frame_00_05_0143.png",
+      "00\\05_thumb\\frame_00_05_0144.png"
+    ],
+    "56a7d671b7fceb709e1038fb652ab616d86721078d042937a20f70bf93f2a642": [
+      "00\\05_thumb\\frame_00_05_0061.png",
+      "00\\05_thumb\\frame_00_05_0062.png"
+    ],
+    "c23ce62057a53c5cb5827fbb26423f54c697ff1139ea8ad915fff69d14752432": [
+      "00\\05_thumb\\frame_00_05_0079.png",
+      "00\\05_thumb\\frame_00_05_0080.png"
+    ],
+    "e40d077785a27c6a56cfd0fe0028411b8ec5ddb3e85faff720640f046cfdca3f": [
+      "00\\05_thumb\\frame_00_05_0089.png",
+      "00\\05_thumb\\frame_00_05_0090.png"
+    ],
+    "23e6122ef60b55534023b44f31c66ace7b66aa20427f5cf94127154cacfdd420": [
+      "00\\05_thumb\\frame_00_05_0109.png",
+      "00\\05_thumb\\frame_00_05_0110.png"
+    ],
+    "f2308cf1c0cd131774f3de8af7d5436e1af941776a0d8b0b9c53b959d9480fd6": [
+      "00\\05_thumb\\frame_00_05_0115.png",
+      "00\\05_thumb\\frame_00_05_0116.png"
+    ],
+    "c757d85dc3318605dd00fc95bf7a7008b07b55c1da376a8b41cf642f3ce9917e": [
+      "00\\05_thumb\\frame_00_05_0117.png",
+      "00\\05_thumb\\frame_00_05_0118.png"
+    ],
+    "8e0be8c68a455a605b78a7ebf370a338628658bdde8f5804f1e2de2505e40dbe": [
+      "00\\05_thumb\\frame_00_05_0121.png",
+      "00\\05_thumb\\frame_00_05_0122.png"
+    ],
+    "0b582eb5b4982e283fd784b453f1f5fa539840f2fbb9fef4526a9c3ee7ff8e57": [
+      "00\\05_thumb\\frame_00_05_0123.png",
+      "00\\05_thumb\\frame_00_05_0124.png"
+    ],
+    "edfcf7d69d13fe87a745d6b0aa949e8d0b647f63c8f6681ac5f4bc9f042b55d1": [
+      "00\\08_palm_moved\\frame_00_08_0005.png",
+      "00\\08_palm_moved\\frame_00_08_0006.png"
+    ],
+    "c4c91a9f3090a3ab883fdaa0a545c7c54c5378396660921037d2ce1cb5939d51": [
+      "00\\05_thumb\\frame_00_05_0139.png",
+      "00\\05_thumb\\frame_00_05_0140.png"
+    ],
+    "b65a9a9dcf06f10f948e17c2b5f331e3b64b4d6692a5937044adde278e46e42c": [
+      "00\\05_thumb\\frame_00_05_0145.png",
+      "00\\05_thumb\\frame_00_05_0146.png"
+    ],
+    "a5a8103aaf2e19a4f3bf0d9a7745e5aa706c959a966cb021b2ee7ed2e7aac489": [
+      "00\\05_thumb\\frame_00_05_0163.png",
+      "00\\05_thumb\\frame_00_05_0164.png"
+    ],
+    "70f3fca9b158e3a045df5d521d63855cca159788afec8b8d122c789113785ebd": [
+      "00\\05_thumb\\frame_00_05_0165.png",
+      "00\\05_thumb\\frame_00_05_0166.png"
+    ],
+    "7efe5476e4e3ab726de7ae34967f766db52c23fa0820e6ca4072520a963431c7": [
+      "00\\05_thumb\\frame_00_05_0169.png",
+      "00\\05_thumb\\frame_00_05_0170.png"
+    ],
+    "80279dc13c127e8ac1fab23db62903f10ec258c12408540f16743ef50eb93019": [
+      "00\\08_palm_moved\\frame_00_08_0113.png",
+      "00\\08_palm_moved\\frame_00_08_0114.png"
+    ],
+    "53b79c3574c44b525d05da238c1245858e9a2aa73a1bf7359c439fc1117f3e51": [
+      "00\\08_palm_moved\\frame_00_08_0135.png",
+      "00\\08_palm_moved\\frame_00_08_0136.png"
+    ],
+    "44b0e8ecc3a3bc3912fe7f6c0d44a86fd3a660ee90fced6ed220bb41a9d03907": [
+      "00\\08_palm_moved\\frame_00_08_0021.png",
+      "00\\08_palm_moved\\frame_00_08_0022.png"
+    ],
+    "fed5159408ba19bd6d82eb590410f02634aedffb0817012fba85d8e0690f0d61": [
+      "00\\08_palm_moved\\frame_00_08_0003.png",
+      "00\\08_palm_moved\\frame_00_08_0004.png"
+    ],
+    "95f6b35c6f698f708cfb9d2d587fb8dd29006489dbac06a6f3f68e20b96380ec": [
+      "00\\08_palm_moved\\frame_00_08_0075.png",
+      "00\\08_palm_moved\\frame_00_08_0076.png"
+    ],
+    "64758ce2681687e7b69de1732ea9f1c6b3213377d6004ebb6c5ac384ba63c34f": [
+      "00\\08_palm_moved\\frame_00_08_0033.png",
+      "00\\08_palm_moved\\frame_00_08_0034.png"
+    ],
+    "1f97ff9028eb84f754f1273e4023c522a8ce547b057a9d93bb7936fef810f2f3": [
+      "00\\08_palm_moved\\frame_00_08_0035.png",
+      "00\\08_palm_moved\\frame_00_08_0036.png"
+    ],
+    "c0194764977f78a8ec0e5a81658dec663aa9a60313d07f56d548fd38dda506c0": [
+      "00\\08_palm_moved\\frame_00_08_0043.png",
+      "00\\08_palm_moved\\frame_00_08_0044.png"
+    ],
+    "79a0015c215aa090d5df3ef15a4969f7f8040852e76471bb138acbf62cf42c04": [
+      "00\\08_palm_moved\\frame_00_08_0045.png",
+      "00\\08_palm_moved\\frame_00_08_0046.png"
+    ],
+    "0e58310e20eb4fab264bc0e838e781a38e720c3260f5af46924dee2bf596ce87": [
+      "00\\08_palm_moved\\frame_00_08_0053.png",
+      "00\\08_palm_moved\\frame_00_08_0054.png"
+    ],
+    "59b6288cdd861563ad4f8554250c1de1139c595a1c4420702a27080b13f09536": [
+      "00\\08_palm_moved\\frame_00_08_0111.png",
+      "00\\08_palm_moved\\frame_00_08_0112.png"
+    ],
+    "b9abc9728b61f79659b5701b4662f2bcc24491beab9babfddaa633ff7dc55e13": [
+      "00\\08_palm_moved\\frame_00_08_0069.png",
+      "00\\08_palm_moved\\frame_00_08_0070.png"
+    ],
+    "6e930b3897f7410a2d99e6b53dce10f8123f9c243188feb4a56f13872173d1f1": [
+      "00\\08_palm_moved\\frame_00_08_0071.png",
+      "00\\08_palm_moved\\frame_00_08_0072.png"
+    ],
+    "2d877aecac39d167fa05f8f71efe14e2098c5ba4dc53c56a46c4ca9f235b75bc": [
+      "00\\08_palm_moved\\frame_00_08_0077.png",
+      "00\\08_palm_moved\\frame_00_08_0078.png"
+    ],
+    "7f31dd1fee8b29a3a8e73c8e878904998ca828b73bc9469578f15b25780e8ee6": [
+      "00\\08_palm_moved\\frame_00_08_0093.png",
+      "00\\08_palm_moved\\frame_00_08_0094.png"
+    ],
+    "b6bde8312dd830384d63296ede703c6a1e7b33864d1eb345561cca421486be79": [
+      "00\\08_palm_moved\\frame_00_08_0101.png",
+      "00\\08_palm_moved\\frame_00_08_0102.png"
+    ],
+    "59f7a9182fe37eb623d5f5b35cb9b4749838c643b95ddb1ea644eaf8ab2e12bf": [
+      "00\\08_palm_moved\\frame_00_08_0117.png",
+      "00\\08_palm_moved\\frame_00_08_0118.png"
+    ],
+    "864bfb1efa301029bea57f241d2aeda7728e6a005327f7a3e7707a5ec076794d": [
+      "00\\08_palm_moved\\frame_00_08_0125.png",
+      "00\\08_palm_moved\\frame_00_08_0126.png"
+    ],
+    "7ea1d0e2112bf9cc42a78525de322947cfc19392106cf1c1a977a54ee68f2a10": [
+      "00\\08_palm_moved\\frame_00_08_0127.png",
+      "00\\08_palm_moved\\frame_00_08_0128.png"
+    ],
+    "0ba864b84be953ac4a1d7797f00d5890c5c1f2869a2e6800d616a31946f6872c": [
+      "00\\08_palm_moved\\frame_00_08_0133.png",
+      "00\\08_palm_moved\\frame_00_08_0134.png"
+    ],
+    "547926fac5f368c13264c82f22d363bc2c9286c6af1e5abc6e200d87b9de7463": [
+      "00\\08_palm_moved\\frame_00_08_0153.png",
+      "00\\08_palm_moved\\frame_00_08_0154.png"
+    ],
+    "d9cba87605238c3db45530a0bca591924816c5a8d4c10cb85f66c69d2cfa4d3a": [
+      "00\\08_palm_moved\\frame_00_08_0155.png",
+      "00\\08_palm_moved\\frame_00_08_0156.png"
+    ],
+    "a8e6c03f51f5d4234e4f029c8d3a1d49052555895b5905f6475dcdef530bb3d8": [
+      "00\\08_palm_moved\\frame_00_08_0161.png",
+      "00\\08_palm_moved\\frame_00_08_0162.png"
+    ],
+    "3d2417506c8cd6153d9b83c4cfe3e50cab5521349ce3441b77c3e58505e3bd12": [
+      "00\\08_palm_moved\\frame_00_08_0197.png",
+      "00\\08_palm_moved\\frame_00_08_0198.png"
+    ],
+    "9627e7dcccc6a16e03cc6eab710bf73237dad330027444bb8ebdc559d928d075": [
+      "00\\08_palm_moved\\frame_00_08_0199.png",
+      "00\\08_palm_moved\\frame_00_08_0200.png"
+    ],
+    "5388d12d3ce90961ef5903e48844c6992861286df65f79a47a9cf5497f86d5eb": [
+      "00\\09_c\\frame_00_09_0007.png",
+      "00\\09_c\\frame_00_09_0008.png"
+    ],
+    "a31cc78308563cdf435bd41cbbefccd8e16a921d22dd5134fea0ba1ff7c8995d": [
+      "00\\09_c\\frame_00_09_0009.png",
+      "00\\09_c\\frame_00_09_0010.png"
+    ],
+    "c25785bf0b9bbe4a4bca0578758a2e951bb8e58daa2fcc2db7d9eeaee4164dfc": [
+      "00\\09_c\\frame_00_09_0015.png",
+      "00\\09_c\\frame_00_09_0016.png"
+    ],
+    "84fd3b4720cb940b51d79459cff0548cbfae9b813f284fc56ca4fdda1d80bf01": [
+      "00\\09_c\\frame_00_09_0035.png",
+      "00\\09_c\\frame_00_09_0036.png"
+    ],
+    "16dd550072261cbfb30676a86195ac78fcc479406f626673de1162c9eb0d18d4": [
+      "00\\09_c\\frame_00_09_0049.png",
+      "00\\09_c\\frame_00_09_0050.png"
+    ],
+    "29b6a9ab3f1840fbe4f96d40fbf463288e01eae5e5a9a4ace5aea5206e7b75e2": [
+      "00\\09_c\\frame_00_09_0053.png",
+      "00\\09_c\\frame_00_09_0054.png"
+    ],
+    "1ceadc4f7831e832f5f4bbad90bb6241e66be40daba294966c3859ff5c381389": [
+      "00\\09_c\\frame_00_09_0079.png",
+      "00\\09_c\\frame_00_09_0080.png"
+    ],
+    "2dc690d8b328fa094d75e5317adc17fa38e9e1585694315fe7babaef3c01ea15": [
+      "00\\09_c\\frame_00_09_0069.png",
+      "00\\09_c\\frame_00_09_0070.png"
+    ],
+    "929d1fab5340cbfbe96762adb21d73868ab64dc8fc180704d0868f7d9cc0954f": [
+      "00\\09_c\\frame_00_09_0071.png",
+      "00\\09_c\\frame_00_09_0072.png"
+    ],
+    "5eb5ea53aea6ee273ffec48ae194f8b94ea725c1a55fca062ec0bf4fc9b89ff1": [
+      "00\\09_c\\frame_00_09_0077.png",
+      "00\\09_c\\frame_00_09_0078.png"
+    ],
+    "6e8e58f15ecce83cd8f0605f3b52a6dc72a6e9216ca1e6f740d49772528d2b33": [
+      "00\\09_c\\frame_00_09_0095.png",
+      "00\\09_c\\frame_00_09_0096.png"
+    ],
+    "bcb136f8fb5e8e09b2782e089932d3b2cb3edf1c792481f28867774b0dfb50a5": [
+      "00\\09_c\\frame_00_09_0097.png",
+      "00\\09_c\\frame_00_09_0098.png"
+    ],
+    "c9e94c03854ea70f1394daf5fe7c18be6064d730ee91cf7689f5d141fd0a1afe": [
+      "00\\09_c\\frame_00_09_0101.png",
+      "00\\09_c\\frame_00_09_0102.png"
+    ],
+    "54f872798bbb1f0cee67c80aff2b1c083254fce58f76a9304eefa3c4551ac628": [
+      "00\\09_c\\frame_00_09_0103.png",
+      "00\\09_c\\frame_00_09_0104.png"
+    ],
+    "a6a550ddb28601165242b22d8b269e7bfae1c419dd21aa443db78c2af4015cca": [
+      "00\\09_c\\frame_00_09_0145.png",
+      "00\\09_c\\frame_00_09_0146.png"
+    ],
+    "c66753687a1b6cde72eaeea80c06e218a6b44275189c12b93b7f00ca14af4d7e": [
+      "00\\09_c\\frame_00_09_0119.png",
+      "00\\09_c\\frame_00_09_0120.png"
+    ],
+    "d26847c6362d190f31608fbcabeccaf4bfae72e729fa868290955fe60ba10844": [
+      "00\\09_c\\frame_00_09_0123.png",
+      "00\\09_c\\frame_00_09_0124.png"
+    ],
+    "8343adc3dcd41c65cf7626e601670787f909f1f4feb8f7abcb0ec5e7e8f650ca": [
+      "00\\09_c\\frame_00_09_0125.png",
+      "00\\09_c\\frame_00_09_0126.png"
+    ],
+    "0705eb265ebbab8f59cecf1fbba75bee9e89f807a3b4a1cb7d388c9211ee5bb9": [
+      "00\\09_c\\frame_00_09_0129.png",
+      "00\\09_c\\frame_00_09_0130.png"
+    ],
+    "5e97611f624b49f2c7f6e32acc8183adf68d8fba06062118ec036b4b619e36df": [
+      "00\\09_c\\frame_00_09_0131.png",
+      "00\\09_c\\frame_00_09_0132.png"
+    ],
+    "6a0294a42cff858585ee9a07eccc7d2e028a8ada1d7d75b7ef7b797051345572": [
+      "00\\09_c\\frame_00_09_0173.png",
+      "00\\09_c\\frame_00_09_0174.png"
+    ],
+    "7b7b654b2b517f7fde68b92f0bea23c7d779427d32e6a74a0c3cc1eddf09ac0b": [
+      "00\\09_c\\frame_00_09_0137.png",
+      "00\\09_c\\frame_00_09_0138.png"
+    ],
+    "468faf4c7075af3767494201d0639b6094100a3f4ab77ccf71cf5d6af60d3895": [
+      "00\\09_c\\frame_00_09_0149.png",
+      "00\\09_c\\frame_00_09_0150.png"
+    ],
+    "862705d104215b8cd428511e6201e131083d077c059898a8a1644c33bcc47143": [
+      "00\\09_c\\frame_00_09_0151.png",
+      "00\\09_c\\frame_00_09_0152.png"
+    ],
+    "b134629dee8d2810e4319614c5c04aadea1d777df0c8a3d6d5d5f93985ca4621": [
+      "00\\09_c\\frame_00_09_0159.png",
+      "00\\09_c\\frame_00_09_0160.png"
+    ],
+    "6e088f61125466f96c0322d317dbe25492a0379a57dd0c9e044f3fa29199d6c5": [
+      "00\\09_c\\frame_00_09_0161.png",
+      "00\\09_c\\frame_00_09_0162.png"
+    ],
+    "14271c6dfa11237f21537b92b61a4b0d61c4030591830958726fc4e00d4909ab": [
+      "00\\09_c\\frame_00_09_0171.png",
+      "00\\09_c\\frame_00_09_0172.png"
+    ],
+    "48ab9f26b8173a3d2cb340bd4e1d5d510e49defd818aa46c19433d48ba49c952": [
+      "00\\09_c\\frame_00_09_0187.png",
+      "00\\09_c\\frame_00_09_0188.png"
+    ],
+    "2f44f0f12766fef1473e15157c87c77cba448a24cf714aae7135b329197d55b2": [
+      "00\\09_c\\frame_00_09_0189.png",
+      "00\\09_c\\frame_00_09_0190.png"
+    ],
+    "e5c1b32b982d5db71c74aa27f3b0c1258ec4602bc3c964d6fc202f8c5011b2e6": [
+      "00\\09_c\\frame_00_09_0193.png",
+      "00\\09_c\\frame_00_09_0194.png"
+    ],
+    "7f8c89e83ebe08e638c108f997982b59363f8d1fc5a5a7e460f84e28fe5bee3c": [
+      "00\\09_c\\frame_00_09_0195.png",
+      "00\\09_c\\frame_00_09_0196.png"
+    ],
+    "1973e244c03eabb73176c7659b0d0ad8a8099faa84c43530ec8a29c60c0e377b": [
+      "08\\03_fist\\frame_08_03_0182.png",
+      "08\\03_fist\\frame_08_03_0183.png"
+    ],
+    "b220e1e78ff7aa73cb199538b3d6d6b12bf25650247d371da15634554be01bf2": [
+      "02\\08_palm_moved\\frame_02_08_0126.png",
+      "05\\08_palm_moved\\frame_05_08_0070.png"
+    ],
+    "dc3a3b9c0c26363949d5ebc8fd506dc7ae162796cc6a87380210fa7ff47b473b": [
+      "02\\08_palm_moved\\frame_02_08_0098.png",
+      "05\\08_palm_moved\\frame_05_08_0042.png"
+    ],
+    "c7ff413d3e594c48fcc78c5f922dde751c87b6520b543f2603c9f5f98d0758ed": [
+      "02\\08_palm_moved\\frame_02_08_0120.png",
+      "05\\08_palm_moved\\frame_05_08_0064.png"
+    ],
+    "71904730a607752b50bec7b8503a5e7a4fdbbcccf611fc84678410d71d6b8cee": [
+      "02\\08_palm_moved\\frame_02_08_0070.png",
+      "05\\08_palm_moved\\frame_05_08_0014.png"
+    ],
+    "38287fffa7ebee4e713d71a565aebf70a3509e80d5e7cf3f36b60b7c32ffb23d": [
+      "02\\08_palm_moved\\frame_02_08_0116.png",
+      "05\\08_palm_moved\\frame_05_08_0060.png"
+    ],
+    "1c9c4ef36b2e7359233a1f89bf3379a7d8e6e10f33f2530b4d52cf8550315959": [
+      "02\\08_palm_moved\\frame_02_08_0114.png",
+      "05\\08_palm_moved\\frame_05_08_0058.png"
+    ],
+    "3c07202c70c9ae2b965dfeeb9ef65f22387521ccc13b28573cbe4e21288baf34": [
+      "02\\08_palm_moved\\frame_02_08_0118.png",
+      "05\\08_palm_moved\\frame_05_08_0062.png"
+    ],
+    "8ca9e712236bd582596a0150b0fe379e74eec27b6b38d47e0bcffd8779400cee": [
+      "02\\08_palm_moved\\frame_02_08_0072.png",
+      "05\\08_palm_moved\\frame_05_08_0016.png"
+    ],
+    "b22e9c1bc8b30a7c513e4c1ac4f7393dfce961b6d925203e32657d24983997f2": [
+      "02\\08_palm_moved\\frame_02_08_0124.png",
+      "05\\08_palm_moved\\frame_05_08_0068.png"
+    ],
+    "4e8667b31a1a191e6eb8c5e31c895c13d224e1ede7d7c5108b8732efc6d8fc39": [
+      "02\\08_palm_moved\\frame_02_08_0078.png",
+      "05\\08_palm_moved\\frame_05_08_0022.png"
+    ],
+    "d6a2f11cb2e3a9ff181177b8eff724d7b80371b0d7281fea1728f9b7dbb4ec0e": [
+      "02\\08_palm_moved\\frame_02_08_0062.png",
+      "05\\08_palm_moved\\frame_05_08_0006.png"
+    ],
+    "488a007f13f084cc5716cc4df9d0203bb0d18865855879cb686cbbcbf6b28fbd": [
+      "02\\08_palm_moved\\frame_02_08_0106.png",
+      "05\\08_palm_moved\\frame_05_08_0050.png"
+    ],
+    "de2433a5f3c640674563389ee7a46dd97e308bfd76127240a6e1e85b824cb9b8": [
+      "02\\08_palm_moved\\frame_02_08_0076.png",
+      "05\\08_palm_moved\\frame_05_08_0020.png"
+    ],
+    "0705e16480a98539b0771bd1ccc29923c893c991b0537328395a6035e7addcc9": [
+      "02\\08_palm_moved\\frame_02_08_0068.png",
+      "05\\08_palm_moved\\frame_05_08_0012.png"
+    ],
+    "496581b947b1c1a52e41d93079889c16d2adcbea11c32d67708c33ef69095b80": [
+      "02\\08_palm_moved\\frame_02_08_0086.png",
+      "02\\08_palm_moved\\frame_02_08_0088.png",
+      "05\\08_palm_moved\\frame_05_08_0030.png",
+      "05\\08_palm_moved\\frame_05_08_0032.png"
+    ],
+    "b91928d0831c2146b79fc843b9375d02ede7d5b2132e44ef889eabccf33bc323": [
+      "02\\08_palm_moved\\frame_02_08_0104.png",
+      "05\\08_palm_moved\\frame_05_08_0048.png"
+    ],
+    "3d4db566f56dab312d3d7f0c70d70c7cb66f85ecf610c08fd807ab10fca80703": [
+      "02\\08_palm_moved\\frame_02_08_0084.png",
+      "05\\08_palm_moved\\frame_05_08_0028.png"
+    ],
+    "950cf56a443c0c9d485bd1dd07978edb68bbb92a3665c3e1f6a086ec0cd52c5a": [
+      "02\\08_palm_moved\\frame_02_08_0082.png",
+      "05\\08_palm_moved\\frame_05_08_0026.png"
+    ],
+    "156a0c66efb2ab233381e76a4e8b30df804533ddd53d03c97053b2c9b7e96752": [
+      "02\\08_palm_moved\\frame_02_08_0198.png",
+      "05\\08_palm_moved\\frame_05_08_0142.png"
+    ],
+    "e70841798ecc3d405fdaea50a639dadcf66d8e924b8b290366bb08cd5f38b1a8": [
+      "02\\08_palm_moved\\frame_02_08_0170.png",
+      "05\\08_palm_moved\\frame_05_08_0114.png"
+    ],
+    "502fdef752a6299eb35312ddc7db5aa88d5a49b3305c49b6b1683e44973f56be": [
+      "02\\08_palm_moved\\frame_02_08_0130.png",
+      "05\\08_palm_moved\\frame_05_08_0074.png"
+    ],
+    "4626c301822c177fe77816011aa8da0e05740f332d6b92142832403c44c11644": [
+      "02\\08_palm_moved\\frame_02_08_0194.png",
+      "05\\08_palm_moved\\frame_05_08_0138.png"
+    ],
+    "6dae5f850a7b183c7a941d656e5fea83eb4a40fafff9331212a8fdcae03f3fbd": [
+      "02\\08_palm_moved\\frame_02_08_0094.png",
+      "05\\08_palm_moved\\frame_05_08_0038.png"
+    ],
+    "e08c693b25f560f0f7fa607f9565d14780fb7dc129a60ac5caaa73ee7870c21a": [
+      "02\\08_palm_moved\\frame_02_08_0132.png",
+      "05\\08_palm_moved\\frame_05_08_0076.png"
+    ],
+    "b020dbcebe39a5d3bf18fe27b555cf71ece929f698059404ea1084cde8f123a4": [
+      "02\\08_palm_moved\\frame_02_08_0064.png",
+      "05\\08_palm_moved\\frame_05_08_0008.png"
+    ],
+    "f09fa544b73d4eb974807da8c06d462b502fdd417ef6b85fc4b2c8d907f9c3dc": [
+      "02\\08_palm_moved\\frame_02_08_0100.png",
+      "05\\08_palm_moved\\frame_05_08_0044.png"
+    ],
+    "4baa6df25aba51e4d75d05a36c103acdc50a25338f0dd96f6a693337bb6249f8": [
+      "08\\03_fist\\frame_08_03_0178.png",
+      "08\\03_fist\\frame_08_03_0179.png"
+    ],
+    "5f5a0fb75086ad1bd3933abcf0a51837a8c4e355dc21c79c93c2b57872ccf98b": [
+      "08\\03_fist\\frame_08_03_0143.png",
+      "08\\03_fist\\frame_08_03_0144.png"
+    ],
+    "56fa666dc50281e35bf705e7322ffe89648eadbb7a6c48284fd3e50ccab1ff80": [
+      "08\\03_fist\\frame_08_03_0075.png",
+      "08\\03_fist\\frame_08_03_0076.png"
+    ],
+    "b4d78b4b10200d7dc0d436dabb2dbda0c8b07366169f3599fa3686efa5b8bd5b": [
+      "08\\03_fist\\frame_08_03_0119.png",
+      "08\\03_fist\\frame_08_03_0120.png"
+    ],
+    "4b5d4dbe71ea2dcd28c0a8517b1e1a208037358df76c7b329528c310b760817a": [
+      "08\\03_fist\\frame_08_03_0078.png",
+      "08\\03_fist\\frame_08_03_0079.png"
+    ],
+    "ccbeea9de6b2c0ecf25b7cc1491585277480cbd53c34e06fa5362b62cb4a0416": [
+      "08\\03_fist\\frame_08_03_0068.png",
+      "08\\03_fist\\frame_08_03_0069.png"
+    ],
+    "1c8e4d09adae2212102bf487801319527e5fa30cffbaa374cc14697cd7efe274": [
+      "08\\03_fist\\frame_08_03_0198.png",
+      "08\\03_fist\\frame_08_03_0199.png"
+    ],
+    "66c45f1bd9340c4cb85f54b80212c6d938017fb513bb7cb69a88042abbd580cc": [
+      "02\\08_palm_moved\\frame_02_08_0095.png",
+      "05\\08_palm_moved\\frame_05_08_0039.png"
+    ],
+    "8a72eaf263f689fa470b028b8df98fe8df42472c169500dec506c6c3aac1c387": [
+      "02\\08_palm_moved\\frame_02_08_0172.png",
+      "05\\08_palm_moved\\frame_05_08_0116.png"
+    ],
+    "932dd1f8d6ef35cbaa9f5637410a895ef32c8f30f531aff5cab75d955ae8cbce": [
+      "02\\08_palm_moved\\frame_02_08_0168.png",
+      "05\\08_palm_moved\\frame_05_08_0112.png"
+    ],
+    "92a18e155c6f3b3b8aa028213a403f4779a325e59cbb0ffeb1877b1502263986": [
+      "02\\08_palm_moved\\frame_02_08_0077.png",
+      "05\\08_palm_moved\\frame_05_08_0021.png"
+    ],
+    "fdc8e9007658526d770c9b30728fff1c0aed38c2bf058cc6f69baf6b7961d175": [
+      "02\\08_palm_moved\\frame_02_08_0156.png",
+      "05\\08_palm_moved\\frame_05_08_0100.png"
+    ],
+    "e413ffe6e42e57466f5362b00fa52bad7241c56aeec9ed67b32cf185bf3726b6": [
+      "02\\08_palm_moved\\frame_02_08_0081.png",
+      "05\\08_palm_moved\\frame_05_08_0025.png"
+    ],
+    "f984a2361fd599439fa738471280a7f9fcb7c0ccd1e4eb16942d344ae9453aa7": [
+      "02\\08_palm_moved\\frame_02_08_0152.png",
+      "05\\08_palm_moved\\frame_05_08_0096.png"
+    ],
+    "84626e0f3f49d30a5613eb56c6534c514363c89a10cdac0783b36e2dcafba302": [
+      "02\\08_palm_moved\\frame_02_08_0057.png",
+      "05\\08_palm_moved\\frame_05_08_0001.png"
+    ],
+    "ab8a96bf30bc899395d7a1f1a7bbd55d1c323d48fcdbdf3b8243a95382a86e6e": [
+      "02\\08_palm_moved\\frame_02_08_0058.png",
+      "05\\08_palm_moved\\frame_05_08_0002.png"
+    ],
+    "2e49589fb12bc2426da61136db7ab822b319804635ece92b5faccd4e59db8ebb": [
+      "02\\08_palm_moved\\frame_02_08_0059.png",
+      "05\\08_palm_moved\\frame_05_08_0003.png"
+    ],
+    "f54e3f58cd00982412bc5986843b208396c58516e2775bbba34e87fee3d8303a": [
+      "02\\08_palm_moved\\frame_02_08_0079.png",
+      "05\\08_palm_moved\\frame_05_08_0023.png"
+    ],
+    "9847cef7ec1677d4e6b944ade3cf6d05404337dc31c0e9fb6ce3bd5d9a0881a0": [
+      "02\\08_palm_moved\\frame_02_08_0060.png",
+      "05\\08_palm_moved\\frame_05_08_0004.png"
+    ],
+    "b6fbc47b955aa87a1ad8bbbdc5128e5b82179dd04f082c2394238fb74a6fddcb": [
+      "02\\08_palm_moved\\frame_02_08_0061.png",
+      "05\\08_palm_moved\\frame_05_08_0005.png"
+    ],
+    "c439fe08a643e06d5233bd25104822735a6e804c0d4e9793d47bb96814eb5583": [
+      "02\\08_palm_moved\\frame_02_08_0063.png",
+      "05\\08_palm_moved\\frame_05_08_0007.png"
+    ],
+    "8387dd3bce28243cb96c3c315a43b86ba4c7b1d952dc25edfff12a6602e2f2b2": [
+      "02\\08_palm_moved\\frame_02_08_0065.png",
+      "05\\08_palm_moved\\frame_05_08_0009.png"
+    ],
+    "c771db16735c7d6d15cec30977ffe40324f143d3509704119049681adf0c666a": [
+      "02\\08_palm_moved\\frame_02_08_0066.png",
+      "05\\08_palm_moved\\frame_05_08_0010.png"
+    ],
+    "e48ad2fdb1344fe2b165e488068794d89b2db281f3512d0d26615504ac893055": [
+      "02\\08_palm_moved\\frame_02_08_0067.png",
+      "05\\08_palm_moved\\frame_05_08_0011.png"
+    ],
+    "88dfda7a6274ae06af25d0ff8f10ce6522f43033fdd32a94a39566268ffa6911": [
+      "02\\08_palm_moved\\frame_02_08_0069.png",
+      "05\\08_palm_moved\\frame_05_08_0013.png"
+    ],
+    "084b523cd2cdff9d435f290a5a0745530ba39c40babe4aeda31a281d8cac5327": [
+      "02\\08_palm_moved\\frame_02_08_0071.png",
+      "05\\08_palm_moved\\frame_05_08_0015.png"
+    ],
+    "8f1cca740c9e86845fa8c702ba821ece0dd787abb5f26c2cbc855085c6e5e738": [
+      "02\\08_palm_moved\\frame_02_08_0073.png",
+      "05\\08_palm_moved\\frame_05_08_0017.png"
+    ],
+    "16fd766a03254bb0ba0e18b8b65b8fbc3358a266bf1f6d1cd0a4ed923a636cae": [
+      "02\\08_palm_moved\\frame_02_08_0074.png",
+      "05\\08_palm_moved\\frame_05_08_0018.png"
+    ],
+    "950fa9f61e2298f1251e6acae44cb8c76c316f6cdde4786357adc34b235ab0f5": [
+      "02\\08_palm_moved\\frame_02_08_0075.png",
+      "05\\08_palm_moved\\frame_05_08_0019.png"
+    ],
+    "31f942a935481b19f64ffc6f3b1a1ae81b01171a23e6511ba7b75b4e0efc9363": [
+      "02\\08_palm_moved\\frame_02_08_0103.png",
+      "05\\08_palm_moved\\frame_05_08_0047.png"
+    ],
+    "0069f2d845d09b38cd4b86ab14604f9bca0fe85f8ed75d75ac257cb3f6176840": [
+      "02\\08_palm_moved\\frame_02_08_0080.png",
+      "05\\08_palm_moved\\frame_05_08_0024.png"
+    ],
+    "59e465df859f2401d0da935fbeb0cfa2a479635daa45be405303478dbbe3cb52": [
+      "02\\08_palm_moved\\frame_02_08_0083.png",
+      "05\\08_palm_moved\\frame_05_08_0027.png"
+    ],
+    "e68abbdc5872725c9f25691efe5fd2632f67fff43b37bde42ee11db8d9d06caa": [
+      "02\\08_palm_moved\\frame_02_08_0085.png",
+      "02\\08_palm_moved\\frame_02_08_0087.png",
+      "05\\08_palm_moved\\frame_05_08_0029.png",
+      "05\\08_palm_moved\\frame_05_08_0031.png"
+    ],
+    "ac9430bbab45ae17761862ce5a14783d3cca34cf95d7b75144e08e93127c17a7": [
+      "02\\08_palm_moved\\frame_02_08_0148.png",
+      "05\\08_palm_moved\\frame_05_08_0092.png"
+    ],
+    "9d440edeea8561684ae424de9c925bd92919333c652779cf0e6c2eec59363a04": [
+      "02\\08_palm_moved\\frame_02_08_0089.png",
+      "05\\08_palm_moved\\frame_05_08_0033.png"
+    ],
+    "541ac5f9ee135d0f763ce5d26756f7a3bad602b4df2077440274f013fc886c6a": [
+      "02\\08_palm_moved\\frame_02_08_0090.png",
+      "05\\08_palm_moved\\frame_05_08_0034.png"
+    ],
+    "a8d33abab47a82bdb250524d353c6601583b7c7b29eed6735009dfc972187481": [
+      "02\\08_palm_moved\\frame_02_08_0091.png",
+      "05\\08_palm_moved\\frame_05_08_0035.png"
+    ],
+    "50d61a07f5d6f8f60a71328291d212df38af773e3ffaac5e3b471268c08ecb3a": [
+      "02\\08_palm_moved\\frame_02_08_0092.png",
+      "05\\08_palm_moved\\frame_05_08_0036.png"
+    ],
+    "446d932cf63bffc1bd7a5c3c11299524b2e12323ac78506d19c25eefc6de42da": [
+      "02\\08_palm_moved\\frame_02_08_0093.png",
+      "05\\08_palm_moved\\frame_05_08_0037.png"
+    ],
+    "7ab2446b47598d2276c09d6c697a2109ae269fd7859b9d4017b6321f4a3958c5": [
+      "02\\08_palm_moved\\frame_02_08_0096.png",
+      "05\\08_palm_moved\\frame_05_08_0040.png"
+    ],
+    "d01412feb3527b8b979a4b598cde1019523fbed2f471c1d49773d97c35f59b99": [
+      "02\\08_palm_moved\\frame_02_08_0097.png",
+      "05\\08_palm_moved\\frame_05_08_0041.png"
+    ],
+    "4db4d98396aba1361aabf86cfc6a3ef07f10ec28a952794aa8df87618730fead": [
+      "02\\08_palm_moved\\frame_02_08_0099.png",
+      "05\\08_palm_moved\\frame_05_08_0043.png"
+    ],
+    "8f3d9c9bcf4a5194e151e201a9720c538930351afc7f1026439ec2ec4917ab8c": [
+      "02\\08_palm_moved\\frame_02_08_0101.png",
+      "05\\08_palm_moved\\frame_05_08_0045.png"
+    ],
+    "5a8c0119e99f6d1bc4c0c976d307a6aa161eaa3f891c32baa30cba51df4d9095": [
+      "02\\08_palm_moved\\frame_02_08_0102.png",
+      "05\\08_palm_moved\\frame_05_08_0046.png"
+    ],
+    "5c2eeb24bd555ff045f92ae179efee6b4e8185fa6266416dfa525b6d616aae62": [
+      "02\\08_palm_moved\\frame_02_08_0105.png",
+      "05\\08_palm_moved\\frame_05_08_0049.png"
+    ],
+    "c937481b83406ea89033f33928ac55b02395d365c712264d6be6a3193f1ee49e": [
+      "02\\08_palm_moved\\frame_02_08_0107.png",
+      "05\\08_palm_moved\\frame_05_08_0051.png"
+    ],
+    "f85407244150efbe0e5eeea00338e74aaa1db9953c3c6a439468d45be44a5db1": [
+      "02\\08_palm_moved\\frame_02_08_0108.png",
+      "05\\08_palm_moved\\frame_05_08_0052.png"
+    ],
+    "8ebdc3967d94ae78e64d688ad10309b395caba5905eecbaa6024d6158403c871": [
+      "02\\08_palm_moved\\frame_02_08_0109.png",
+      "05\\08_palm_moved\\frame_05_08_0053.png"
+    ],
+    "c29bebe08987eda6ae04e3a8a1d0d7496b38dcd4846d528d0723ee7f6ba5b913": [
+      "02\\08_palm_moved\\frame_02_08_0110.png",
+      "05\\08_palm_moved\\frame_05_08_0054.png"
+    ],
+    "fd7e6f9026431ddec210745e2762af6e90da23fb233b18b13445e0c70cd2ac35": [
+      "02\\08_palm_moved\\frame_02_08_0111.png",
+      "05\\08_palm_moved\\frame_05_08_0055.png"
+    ],
+    "52eb6fccc1cba9e58fc76aba4d3b4265dc2ac045864556097c1102c3a8a34a8d": [
+      "02\\08_palm_moved\\frame_02_08_0112.png",
+      "05\\08_palm_moved\\frame_05_08_0056.png"
+    ],
+    "1d4f88c8750e78decfa9e795540a146c644012a98d3b2f65f425542a105e3d62": [
+      "02\\08_palm_moved\\frame_02_08_0113.png",
+      "05\\08_palm_moved\\frame_05_08_0057.png"
+    ],
+    "b09fc515d531781ae2876cb5ef85e8ed3ea8124a398edbf095195e4a2d0e5717": [
+      "02\\08_palm_moved\\frame_02_08_0115.png",
+      "05\\08_palm_moved\\frame_05_08_0059.png"
+    ],
+    "0e63d9a4eb275e1c35811c4bbcf4e75b94c8e0ad8e10d42926d197a6eed355dc": [
+      "02\\08_palm_moved\\frame_02_08_0117.png",
+      "05\\08_palm_moved\\frame_05_08_0061.png"
+    ],
+    "dfc991aa7c4b598afbb8ab86a03a8a6ae55fe3182e7bfaea9f8c71f3a217ab9e": [
+      "02\\08_palm_moved\\frame_02_08_0119.png",
+      "05\\08_palm_moved\\frame_05_08_0063.png"
+    ],
+    "b5add343c230746179cfcb4d567a37d7f3724765b9d6535575ff98a31dbd52f9": [
+      "02\\08_palm_moved\\frame_02_08_0121.png",
+      "05\\08_palm_moved\\frame_05_08_0065.png"
+    ],
+    "e8e875872cdb8a46ee75adbbbe731bb19ad250833658684548046f7ebd920ba0": [
+      "02\\08_palm_moved\\frame_02_08_0122.png",
+      "05\\08_palm_moved\\frame_05_08_0066.png"
+    ],
+    "e0742c0ca7022fe75720b6c54718d911d5ca32a298b5f10e5a11312ba97f4adf": [
+      "02\\08_palm_moved\\frame_02_08_0123.png",
+      "05\\08_palm_moved\\frame_05_08_0067.png"
+    ],
+    "3fdc38ad536c845fa424aefa8859301ce1cb947241fd97d985d6cad02711acc5": [
+      "02\\08_palm_moved\\frame_02_08_0125.png",
+      "05\\08_palm_moved\\frame_05_08_0069.png"
+    ],
+    "c9e9cdb5939efbeee159e04d728b635f344822b5233b25a636e5bf95844f567d": [
+      "02\\08_palm_moved\\frame_02_08_0127.png",
+      "05\\08_palm_moved\\frame_05_08_0071.png"
+    ],
+    "01862141df09d795d4335a9b68e6f7fd042eacb58884776740961600d388dc1c": [
+      "02\\08_palm_moved\\frame_02_08_0128.png",
+      "05\\08_palm_moved\\frame_05_08_0072.png"
+    ],
+    "f3d483e6aaeda53eecae0eb37a27a4f923629b9ffe7f5aad7421cc2b6220a79c": [
+      "02\\08_palm_moved\\frame_02_08_0129.png",
+      "05\\08_palm_moved\\frame_05_08_0073.png"
+    ],
+    "6d304ccf243309572822009d425aebdad3449fe0890fddf8f76e812763bffacc": [
+      "02\\08_palm_moved\\frame_02_08_0131.png",
+      "05\\08_palm_moved\\frame_05_08_0075.png"
+    ],
+    "db2184b6b99830b3000e23587985bf63c97f04897c86010c1b5cfc6f1b53be12": [
+      "02\\08_palm_moved\\frame_02_08_0133.png",
+      "05\\08_palm_moved\\frame_05_08_0077.png"
+    ],
+    "f67eb161c04f8ea5e80499506ea1ad053df82130d1d1d12dd9b729ab99f0660e": [
+      "02\\08_palm_moved\\frame_02_08_0134.png",
+      "05\\08_palm_moved\\frame_05_08_0078.png"
+    ],
+    "d276705fb39b8e5d791aa561a78c5f35a88904cb2c72b973c86d57003e07be4f": [
+      "02\\08_palm_moved\\frame_02_08_0135.png",
+      "05\\08_palm_moved\\frame_05_08_0079.png"
+    ],
+    "74516200d76421abc2c78379235cc7d51e7b917e3fabcf516a2dccf7bc60f301": [
+      "02\\08_palm_moved\\frame_02_08_0136.png",
+      "05\\08_palm_moved\\frame_05_08_0080.png"
+    ],
+    "d5f06f221d45ff6d111fc8f96f3fb2f38861f833c37a75d61e499acb7283d38a": [
+      "02\\08_palm_moved\\frame_02_08_0137.png",
+      "05\\08_palm_moved\\frame_05_08_0081.png"
+    ],
+    "3f99e3937a06c544a02be87a2b59e3f664f9a8e289e8cb51c8e365ff18e80dbf": [
+      "02\\08_palm_moved\\frame_02_08_0138.png",
+      "05\\08_palm_moved\\frame_05_08_0082.png"
+    ],
+    "7a042d076a1cf48abf602e916e7ba3be3ba3bde8990253281fe3c31e85d76a5c": [
+      "02\\08_palm_moved\\frame_02_08_0139.png",
+      "05\\08_palm_moved\\frame_05_08_0083.png"
+    ],
+    "08d97c807685ad8790a913b5dddea95bd8392d36a2f71264b86c0e6d185a5478": [
+      "02\\08_palm_moved\\frame_02_08_0140.png",
+      "05\\08_palm_moved\\frame_05_08_0084.png"
+    ],
+    "acc98bf0da8c86616b0aa9d5e33a90f710e6754a81450620325fbb86a4a04291": [
+      "02\\08_palm_moved\\frame_02_08_0141.png",
+      "05\\08_palm_moved\\frame_05_08_0085.png"
+    ],
+    "8bff0638f7d2fd48dc0c7c0146b6b9cb1527b741c47d11e7cfaa54b5558d4f7a": [
+      "02\\08_palm_moved\\frame_02_08_0142.png",
+      "05\\08_palm_moved\\frame_05_08_0086.png"
+    ],
+    "aa22194b42377dbeef90c922258a6930be760d5895e4c0532d5f0e439977f0e7": [
+      "02\\08_palm_moved\\frame_02_08_0143.png",
+      "05\\08_palm_moved\\frame_05_08_0087.png"
+    ],
+    "5f70befb1a20775301f102d0d2e974344dd7dcccbbe85392b8004736edbe5f51": [
+      "02\\08_palm_moved\\frame_02_08_0144.png",
+      "05\\08_palm_moved\\frame_05_08_0088.png"
+    ],
+    "cb525bde04b24966502c683fdb0f24a304eea036f62be00000efaa08e74a8c29": [
+      "02\\08_palm_moved\\frame_02_08_0145.png",
+      "05\\08_palm_moved\\frame_05_08_0089.png"
+    ],
+    "97aa19282abab663373698ff229c224066cbcfa759d82aa3f32c4bd41fc756fa": [
+      "02\\08_palm_moved\\frame_02_08_0146.png",
+      "05\\08_palm_moved\\frame_05_08_0090.png"
+    ],
+    "40ba605aff5847641b3b95690d0db0353368973c0205b8f9aa3a3a8fa17a29f5": [
+      "02\\08_palm_moved\\frame_02_08_0147.png",
+      "05\\08_palm_moved\\frame_05_08_0091.png"
+    ],
+    "1d9db05a1713aa3eb824a11a90adc0896e3461c830d8dc7d718c30b67c83713a": [
+      "02\\08_palm_moved\\frame_02_08_0149.png",
+      "05\\08_palm_moved\\frame_05_08_0093.png"
+    ],
+    "6e9ff638985e28b2b161392ad76e61e2189bb3153efac92af8b9ce26d32c7c6f": [
+      "02\\08_palm_moved\\frame_02_08_0150.png",
+      "05\\08_palm_moved\\frame_05_08_0094.png"
+    ],
+    "c950607d082561b0d1ab8eb385a6990b723d80f09960d0eae3fdd07e7d77197e": [
+      "02\\08_palm_moved\\frame_02_08_0151.png",
+      "05\\08_palm_moved\\frame_05_08_0095.png"
+    ],
+    "ec21b050cdf48665d39bb1e0437488479f791fe2522b8f4c342a5ee33f250700": [
+      "02\\08_palm_moved\\frame_02_08_0155.png",
+      "05\\08_palm_moved\\frame_05_08_0099.png"
+    ],
+    "d76137f6d5a9f2969d888a878e60df81d2a73afdd604ceb3cc3182cbb76153ff": [
+      "02\\08_palm_moved\\frame_02_08_0153.png",
+      "05\\08_palm_moved\\frame_05_08_0097.png"
+    ],
+    "1e40233eeb24db6b5c62e223db570d94dda3ef6c4119d76c90f65cc025ceab78": [
+      "02\\08_palm_moved\\frame_02_08_0154.png",
+      "05\\08_palm_moved\\frame_05_08_0098.png"
+    ],
+    "bdfe06b0243528e018ef6a970457e980a013b3a9658499d83582875b3bace7bd": [
+      "02\\08_palm_moved\\frame_02_08_0157.png",
+      "05\\08_palm_moved\\frame_05_08_0101.png"
+    ],
+    "4c441bb21677edc34e2a9e6bc091dffe7781fb999203c56cbdeff6acc8c041d6": [
+      "02\\08_palm_moved\\frame_02_08_0158.png",
+      "05\\08_palm_moved\\frame_05_08_0102.png"
+    ],
+    "9240173f8af8d5b139ca72834276a0c82fba0afb56d041d88529c7bc5ddcffb5": [
+      "02\\08_palm_moved\\frame_02_08_0159.png",
+      "05\\08_palm_moved\\frame_05_08_0103.png"
+    ],
+    "3013b1584dfa2011703d0a516b530903646df3328c1761140fb4506d7241d09e": [
+      "02\\08_palm_moved\\frame_02_08_0160.png",
+      "05\\08_palm_moved\\frame_05_08_0104.png"
+    ],
+    "fd51a54b19334d87ef1159de9582194315c5d763fa00cace9eca3c6a6765c6c9": [
+      "02\\08_palm_moved\\frame_02_08_0161.png",
+      "05\\08_palm_moved\\frame_05_08_0105.png"
+    ],
+    "c1760fbdc5fae377b0ff5e39019457ee1bdd8a18df8eb2c87c139695bf7137c9": [
+      "02\\08_palm_moved\\frame_02_08_0162.png",
+      "05\\08_palm_moved\\frame_05_08_0106.png"
+    ],
+    "7932e388062bc7a445f0033df3404fb7e876bf1949c779f2a72ebe56d0a90220": [
+      "02\\08_palm_moved\\frame_02_08_0163.png",
+      "05\\08_palm_moved\\frame_05_08_0107.png"
+    ],
+    "7e3a9c9c6ef87dc040a53a699dfb196631964456a236570a1361340d9213ba7e": [
+      "02\\08_palm_moved\\frame_02_08_0164.png",
+      "05\\08_palm_moved\\frame_05_08_0108.png"
+    ],
+    "c2c2152fb52551e550838497d02c6ddcdb24421ae39df4f2589a75a139e9d428": [
+      "02\\08_palm_moved\\frame_02_08_0165.png",
+      "05\\08_palm_moved\\frame_05_08_0109.png"
+    ],
+    "681cdd998180b8f5be8a018a22a90c0e5d1640386d69f2f97ed9390621bc9617": [
+      "02\\08_palm_moved\\frame_02_08_0166.png",
+      "05\\08_palm_moved\\frame_05_08_0110.png"
+    ],
+    "816e136c53c7f22d4503f34f8283808107e9f0bfeb8fad1c47de2a53512e758d": [
+      "02\\08_palm_moved\\frame_02_08_0167.png",
+      "05\\08_palm_moved\\frame_05_08_0111.png"
+    ],
+    "5022a7547afed00c768f845aa7495ef36abd1a61b8f8b3cdd5c615b91b40b1d9": [
+      "02\\08_palm_moved\\frame_02_08_0169.png",
+      "05\\08_palm_moved\\frame_05_08_0113.png"
+    ],
+    "7bf99dac2974553b1160ca5f0bcdbbf11fb94e90420b363d2667911c9564360e": [
+      "02\\08_palm_moved\\frame_02_08_0171.png",
+      "05\\08_palm_moved\\frame_05_08_0115.png"
+    ],
+    "8d43e40ada58b4f98757b0884c2d24ce8abd67a04ac3d7f8ad1eb7e757c562fb": [
+      "02\\08_palm_moved\\frame_02_08_0173.png",
+      "05\\08_palm_moved\\frame_05_08_0117.png"
+    ],
+    "9300715679ccaaf3e35465c0493ed5ce35cb683a4961b86e15fa30e80e869c63": [
+      "02\\08_palm_moved\\frame_02_08_0174.png",
+      "05\\08_palm_moved\\frame_05_08_0118.png"
+    ],
+    "5c7a1cad6ca455319d15063f344bedcac46f063b1ed0ada4aa86caff23677c16": [
+      "02\\08_palm_moved\\frame_02_08_0175.png",
+      "05\\08_palm_moved\\frame_05_08_0119.png"
+    ],
+    "2dab354a68bc30a0b276ad94279efc6cd8916158d47b308facaa0e05dc9fcd35": [
+      "02\\08_palm_moved\\frame_02_08_0176.png",
+      "05\\08_palm_moved\\frame_05_08_0120.png"
+    ],
+    "51e59e9264c2e135cf9b255833a9df7b43129e70f155b976cf07b4bbe5690e91": [
+      "02\\08_palm_moved\\frame_02_08_0177.png",
+      "05\\08_palm_moved\\frame_05_08_0121.png"
+    ],
+    "71ed8e1b70ec5d59d0ede6c3d884f0d22233561127ce7c3c14e39294be098a91": [
+      "02\\08_palm_moved\\frame_02_08_0178.png",
+      "05\\08_palm_moved\\frame_05_08_0122.png"
+    ],
+    "e791cb7361b73f3100d1df50bee8ed558b94ba619d04ce3b6c56104cb4c31ade": [
+      "02\\08_palm_moved\\frame_02_08_0179.png",
+      "05\\08_palm_moved\\frame_05_08_0123.png"
+    ],
+    "bd43183c3c48fdb4806c2a0aefc9470fa443908f4d9449d09b9018068dc5aaa3": [
+      "02\\08_palm_moved\\frame_02_08_0180.png",
+      "05\\08_palm_moved\\frame_05_08_0124.png"
+    ],
+    "21b57f49f54ffea3b6f00fc71d0beb6f41ef168fc39d54321732936d72080a4d": [
+      "02\\08_palm_moved\\frame_02_08_0181.png",
+      "05\\08_palm_moved\\frame_05_08_0125.png"
+    ],
+    "521717f06b282e7fb193da2ce5564cff1dbd80093d067c1710390214df0401fa": [
+      "02\\08_palm_moved\\frame_02_08_0182.png",
+      "05\\08_palm_moved\\frame_05_08_0126.png"
+    ],
+    "d42c9abbe3400762092c892bc6b926a4efa7f70ef4ebce86df3acfd2c9309bac": [
+      "02\\08_palm_moved\\frame_02_08_0183.png",
+      "05\\08_palm_moved\\frame_05_08_0127.png"
+    ],
+    "6c8652942bdb009db2a6977805175e5660467f3bb66c0caeefd946cc885af475": [
+      "02\\08_palm_moved\\frame_02_08_0191.png",
+      "05\\08_palm_moved\\frame_05_08_0135.png"
+    ],
+    "b924ec9e046f87948631da4c202e02b933ab8ac085291ffd658c44b533f07445": [
+      "02\\08_palm_moved\\frame_02_08_0184.png",
+      "05\\08_palm_moved\\frame_05_08_0128.png"
+    ],
+    "3b7fe5977a8e1310bc658d0cb5ec98e375764892fc5f20399769492854fa9ad5": [
+      "02\\08_palm_moved\\frame_02_08_0185.png",
+      "05\\08_palm_moved\\frame_05_08_0129.png"
+    ],
+    "d027e26dfcf592e4168106f50d65135bf6a5f72bbd1a652c960a46f6abaf96fb": [
+      "02\\08_palm_moved\\frame_02_08_0186.png",
+      "05\\08_palm_moved\\frame_05_08_0130.png"
+    ],
+    "128ae0698724c36d69d386610fc5e60feac8c4a220e2f6ca86ecb47acb36a6eb": [
+      "02\\08_palm_moved\\frame_02_08_0200.png",
+      "05\\08_palm_moved\\frame_05_08_0144.png"
+    ],
+    "02dcb0cda743324624a22aae209e18f56bab2ddc4de8f9c1b26b269eefae1379": [
+      "02\\08_palm_moved\\frame_02_08_0187.png",
+      "05\\08_palm_moved\\frame_05_08_0131.png"
+    ],
+    "a9e1824a4cec7ddbfeb3d111faad2002885188300a6115b921518ead3428de1d": [
+      "02\\08_palm_moved\\frame_02_08_0188.png",
+      "05\\08_palm_moved\\frame_05_08_0132.png"
+    ],
+    "6efbde518053d37e5d4f1b8c6a26fdee720810b09d7c9c05cd6a44931c4bfaa7": [
+      "02\\08_palm_moved\\frame_02_08_0189.png",
+      "05\\08_palm_moved\\frame_05_08_0133.png"
+    ],
+    "61da6142ff31f909e583225c333dc3ed498860072817ae4bdc4e0f7b00983d68": [
+      "02\\08_palm_moved\\frame_02_08_0190.png",
+      "05\\08_palm_moved\\frame_05_08_0134.png"
+    ],
+    "e9a87983133df63d9aa2b04a72c97a42f0e56b620553ef4e9677cdc7476dc280": [
+      "02\\08_palm_moved\\frame_02_08_0192.png",
+      "05\\08_palm_moved\\frame_05_08_0136.png"
+    ],
+    "1ec94b70bde979dbfa851b13bc1c65d017ea7966b64d181b9a1e2120d60e5ecc": [
+      "02\\08_palm_moved\\frame_02_08_0193.png",
+      "05\\08_palm_moved\\frame_05_08_0137.png"
+    ],
+    "e35fe7f04c1eb6de868dde796288ddf85d82e1e2d2db29cd2a397cd2b6ca695d": [
+      "02\\08_palm_moved\\frame_02_08_0195.png",
+      "05\\08_palm_moved\\frame_05_08_0139.png"
+    ],
+    "2789aa74ae58e9e04168b2c68f492bef19bba529f6cffd97fcd97d219aa4911e": [
+      "02\\08_palm_moved\\frame_02_08_0196.png",
+      "05\\08_palm_moved\\frame_05_08_0140.png"
+    ],
+    "2c03dd080113b17261bb34f6c3455e67d962e4fb71ceaeced8f7e7187f2855f8": [
+      "02\\08_palm_moved\\frame_02_08_0197.png",
+      "05\\08_palm_moved\\frame_05_08_0141.png"
+    ],
+    "f3101ea9b81ba13faa0dd3d211dcb1a8aeb064f3eda9a30c91f8f22b6204aca5": [
+      "02\\08_palm_moved\\frame_02_08_0199.png",
+      "05\\08_palm_moved\\frame_05_08_0143.png"
+    ],
+    "ad688ca781e7474327137ec81cb2b6853d14654405cc775a732676e003addeef": [
+      "08\\03_fist\\frame_08_03_0028.png",
+      "08\\03_fist\\frame_08_03_0029.png"
+    ],
+    "c6199b4618baa2b7865e2a238450e6cc7a52a5cbdecc2c1d5d933ad41bb99bdd": [
+      "08\\03_fist\\frame_08_03_0071.png",
+      "08\\03_fist\\frame_08_03_0072.png"
+    ],
+    "7e6feebfbd4a4e9798d31257b07a0f38f0a990ab4ebec7e22c278f068cfa84a2": [
+      "08\\03_fist\\frame_08_03_0089.png",
+      "08\\03_fist\\frame_08_03_0090.png"
+    ],
+    "eeeed364c966e14616322dda098ec2dc02644280b7e71b4ff597329f1cca66d4": [
+      "08\\03_fist\\frame_08_03_0189.png",
+      "08\\03_fist\\frame_08_03_0190.png"
+    ],
+    "c3541d5329fa9016fea8a165cad7b1870b782215f3eaa3cc67dc4fa31c348554": [
+      "08\\03_fist\\frame_08_03_0022.png",
+      "08\\03_fist\\frame_08_03_0023.png"
+    ],
+    "b713102ed0679d5dd8a19dde6ae5f814633d8df83891375ff6ac745c30e7f894": [
+      "08\\03_fist\\frame_08_03_0060.png",
+      "08\\03_fist\\frame_08_03_0061.png"
+    ],
+    "9645ace54bc1d5df811e02b599834427b2a2e0828dcc0af9afb328985020c065": [
+      "08\\03_fist\\frame_08_03_0113.png",
+      "08\\03_fist\\frame_08_03_0114.png"
+    ],
+    "08d7c90bd8bdec91d3c7a587f6b59398603ced48adeaa5efd01203ebb289097f": [
+      "08\\03_fist\\frame_08_03_0156.png",
+      "08\\03_fist\\frame_08_03_0157.png"
+    ],
+    "e2485562834d386b7bdb674febc287013259b2e0fbd22981c14a3c932b6f6ad6": [
+      "08\\03_fist\\frame_08_03_0093.png",
+      "08\\03_fist\\frame_08_03_0094.png"
+    ],
+    "832e8ff463bb8d1af498ade944732591399175a19e8a741ea750ffeb9b75c873": [
+      "08\\03_fist\\frame_08_03_0042.png",
+      "08\\03_fist\\frame_08_03_0043.png"
+    ],
+    "3bc976afc09a5c99e56fd75ce35bb13292f5a3bec4031a0fc14b7d6724de86ba": [
+      "08\\03_fist\\frame_08_03_0037.png",
+      "08\\03_fist\\frame_08_03_0038.png"
+    ],
+    "2726c5c8f3c82c66fcc321b8bcfe922ff9d54e6835fd18e968b62932efcf5033": [
+      "08\\03_fist\\frame_08_03_0045.png",
+      "08\\03_fist\\frame_08_03_0046.png"
+    ],
+    "aa54ae49930be1e0adb61ff792cd3cf5b9a71fe01d6ded526d03f7d82fd3dd1f": [
+      "08\\03_fist\\frame_08_03_0049.png",
+      "08\\03_fist\\frame_08_03_0050.png"
+    ],
+    "f1d9520850badfc55e6d39c393f4f3968423231878fe3735d7eff7eaa247e7ac": [
+      "08\\03_fist\\frame_08_03_0053.png",
+      "08\\03_fist\\frame_08_03_0054.png"
+    ],
+    "8dc33234a92f29970d6ed8e87649ddc59cac2de961c11e89e62feb1b0e1d9d5a": [
+      "08\\03_fist\\frame_08_03_0103.png",
+      "08\\03_fist\\frame_08_03_0104.png"
+    ],
+    "799ea6d22d8214fb20e27a231818f55025d3010c2c66db081cd76b33c44fc9ec": [
+      "08\\03_fist\\frame_08_03_0108.png",
+      "08\\03_fist\\frame_08_03_0109.png"
+    ],
+    "63205a37e1019be6e4836b2c05714bce2094eb8e6a67cf610c92a6b2714f9f57": [
+      "08\\03_fist\\frame_08_03_0127.png",
+      "08\\03_fist\\frame_08_03_0128.png"
+    ],
+    "25ad387dc2d71ce5550fb8e7a7d5695a5b346405a6330c54328e7ddc15ea74ea": [
+      "08\\03_fist\\frame_08_03_0160.png",
+      "08\\03_fist\\frame_08_03_0161.png"
+    ],
+    "b858fe913ea91d5088bbb3fd87496a916bd1a75c2fc0e95a6e7b493ef67e91e1": [
+      "08\\03_fist\\frame_08_03_0174.png",
+      "08\\03_fist\\frame_08_03_0175.png"
+    ],
+    "40df7fb20dadd32b445944b7d7b2fd5747e03e196dc573a26ed38da8be435da6": [
+      "08\\05_thumb\\frame_08_05_0152.png",
+      "08\\05_thumb\\frame_08_05_0153.png"
+    ]
+  },
+  "duplicate_filenames": {}
+}

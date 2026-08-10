@@ -9,7 +9,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] — 2026-08-10
+
 ### Added
+- Completed Phase 6 — Repository Finalization & Internship Submission.
+- Created publication-quality `README.md` with benchmark tables, architecture flowcharts, screenshot galleries, and setup/execution commands.
+- Authored 17-section formal ML internship `PROJECT_REPORT.md`.
+- Authored step-by-step `REPRODUCIBILITY.md` replication guide.
+- Created `requirements.txt` with pinned, alphabetically sorted dependencies.
+- Created `LICENSE` file containing MIT license and dataset attribution notices.
+- Organized project visual assets under `assets/screenshots/`, `assets/demo/`, and `assets/architecture/`.
+- Refined `.gitignore` to allow analytical reports and visual artifacts while excluding temporary debug logs, raw dataset archives, and binary checkpoints.
+- Completed Phase 5 — Real-Time Desktop Inference Demo.
+- Implemented modular local desktop webcam inference engine in `src/inference/` (`camera.py`, `hand_detector.py`, `preprocess.py`, `predictor.py`, `stabilizer.py`, `overlay.py`, `demo.py`).
+- Added live MediaPipe hand ROI detection, 3-mode image preprocessing (Gray / HistEq / CLAHE), temporal prediction stabilizer, telemetry HUD overlay, developer diagnostics mode, keyboard shortcuts, and `--mock` headless test mode.
+- Expanded automated unit test suite to 60 passing unit tests.
 - Completed Phase 4 Model Evaluation & Error Analysis.
 - Evaluated `models/checkpoints/best_model.pth` on held-out Subject `09` test split (2,000 images).
 - Achieved **100.00% Test Accuracy**, **1.0000 Macro F1**, **1.0000 Macro Precision**, **1.0000 Macro Recall**, and **0.0088 Test Loss**.

@@ -7,6 +7,8 @@ adhering strictly to docs/design.md visual aesthetics.
 from pathlib import Path
 from typing import Dict, Union
 
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 from src.training.history import TrainingHistory

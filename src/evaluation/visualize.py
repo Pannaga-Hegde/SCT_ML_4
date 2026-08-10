@@ -7,6 +7,8 @@ following the dark-slate visual aesthetics defined in docs/design.md.
 from pathlib import Path
 from typing import List, Union, Tuple
 import numpy as np
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import confusion_matrix

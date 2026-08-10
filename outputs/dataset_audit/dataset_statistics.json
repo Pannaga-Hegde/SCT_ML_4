@@ -1,0 +1,416 @@
+{
+  "metadata": {
+    "audit_timestamp_utc": "2026-08-05T11:47:36.607840+00:00",
+    "dataset_name": "LeapGestRecog",
+    "dataset_version": "1.0.0",
+    "dataset_path": "C:\\Users\\panna\\OneDrive\\Desktop\\New folder (2)\\sct_ml_\\SCT_ML_4\\archive\\leapGestRecog",
+    "random_seed": 42,
+    "total_images_scanned": 20000,
+    "total_valid_images": 20000,
+    "total_corrupted_images": 0,
+    "total_classes": 10,
+    "total_subjects": 10,
+    "environment": {
+      "python_version": "3.11.15",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "opencv_version": "5.0.0",
+      "numpy_version": "2.4.6",
+      "matplotlib_version": "3.11.1"
+    }
+  },
+  "structure_summary": {
+    "dataset_path": "C:\\Users\\panna\\OneDrive\\Desktop\\New folder (2)\\sct_ml_\\SCT_ML_4\\archive\\leapGestRecog",
+    "path_exists": true,
+    "found_subjects": [
+      "00",
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "missing_subjects": [],
+    "unexpected_items": [
+      "leapGestRecog"
+    ],
+    "gesture_folder_audit": {
+      "00": {
+        "found_gestures": [
+          "01_palm",
+          "02_l",
+          "03_fist",
+          "04_fist_moved",
+          "05_thumb",
+          "06_index",
+          "07_ok",
+          "08_palm_moved",
+          "09_c",
+          "10_down"
+        ],
+        "missing_gestures": [],
+        "unexpected_folders": [],
+        "empty_gestures": []
+      },
+      "01": {
+        "found_gestures": [
+          "01_palm",
+          "02_l",
+          "03_fist",
+          "04_fist_moved",
+          "05_thumb",
+          "06_index",
+          "07_ok",
+          "08_palm_moved",
+          "09_c",
+          "10_down"
+        ],
+        "missing_gestures": [],
+        "unexpected_folders": [],
+        "empty_gestures": []
+      },
+      "02": {
+        "found_gestures": [
+          "01_palm",
+          "02_l",
+          "03_fist",
+          "04_fist_moved",
+          "05_thumb",
+          "06_index",
+          "07_ok",
+          "08_palm_moved",
+          "09_c",
+          "10_down"
+        ],
+        "missing_gestures": [],
+        "unexpected_folders": [],
+        "empty_gestures": []
+      },
+      "03": {
+        "found_gestures": [
+          "01_palm",
+          "02_l",
+          "03_fist",
+          "04_fist_moved",
+          "05_thumb",
+          "06_index",
+          "07_ok",
+          "08_palm_moved",
+          "09_c",
+          "10_down"
+        ],
+        "missing_gestures": [],
+        "unexpected_folders": [],
+        "empty_gestures": []
+      },
+      "04": {
+        "found_gestures": [
+          "01_palm",
+          "02_l",
+          "03_fist",
+          "04_fist_moved",
+          "05_thumb",
+          "06_index",
+          "07_ok",
+          "08_palm_moved",
+          "09_c",
+          "10_down"
+        ],
+        "missing_gestures": [],
+        "unexpected_folders": [],
+        "empty_gestures": []
+      },
+      "05": {
+        "found_gestures": [
+          "01_palm",
+          "02_l",
+          "03_fist",
+          "04_fist_moved",
+          "05_thumb",
+          "06_index",
+          "07_ok",
+          "08_palm_moved",
+          "09_c",
+          "10_down"
+        ],
+        "missing_gestures": [],
+        "unexpected_folders": [],
+        "empty_gestures": []
+      },
+      "06": {
+        "found_gestures": [
+          "01_palm",
+          "02_l",
+          "03_fist",
+          "04_fist_moved",
+          "05_thumb",
+          "06_index",
+          "07_ok",
+          "08_palm_moved",
+          "09_c",
+          "10_down"
+        ],
+        "missing_gestures": [],
+        "unexpected_folders": [],
+        "empty_gestures": []
+      },
+      "07": {
+        "found_gestures": [
+          "01_palm",
+          "02_l",
+          "03_fist",
+          "04_fist_moved",
+          "05_thumb",
+          "06_index",
+          "07_ok",
+          "08_palm_moved",
+          "09_c",
+          "10_down"
+        ],
+        "missing_gestures": [],
+        "unexpected_folders": [],
+        "empty_gestures": []
+      },
+      "08": {
+        "found_gestures": [
+          "01_palm",
+          "02_l",
+          "03_fist",
+          "04_fist_moved",
+          "05_thumb",
+          "06_index",
+          "07_ok",
+          "08_palm_moved",
+          "09_c",
+          "10_down"
+        ],
+        "missing_gestures": [],
+        "unexpected_folders": [],
+        "empty_gestures": []
+      },
+      "09": {
+        "found_gestures": [
+          "01_palm",
+          "02_l",
+          "03_fist",
+          "04_fist_moved",
+          "05_thumb",
+          "06_index",
+          "07_ok",
+          "08_palm_moved",
+          "09_c",
+          "10_down"
+        ],
+        "missing_gestures": [],
+        "unexpected_folders": [],
+        "empty_gestures": []
+      }
+    },
+    "structure_valid": true
+  },
+  "summary_statistics": {
+    "total_images": 20000,
+    "width_stats": {
+      "min": 640.0,
+      "max": 640.0,
+      "mean": 640.0,
+      "median": 640.0
+    },
+    "height_stats": {
+      "min": 240.0,
+      "max": 240.0,
+      "mean": 240.0,
+      "median": 240.0
+    },
+    "aspect_ratio_stats": {
+      "min": 2.6667,
+      "max": 2.6667,
+      "mean": 2.67,
+      "median": 2.67
+    },
+    "file_size_bytes_stats": {
+      "min": 52681.0,
+      "max": 62979.0,
+      "mean": 57241.63,
+      "median": 57152.0
+    },
+    "unique_channels": [
+      1
+    ],
+    "unique_color_modes": [
+      "L"
+    ]
+  },
+  "class_statistics": {
+    "total_classes": 10,
+    "total_valid_images": 20000,
+    "class_image_counts": {
+      "01_palm": 2000,
+      "02_l": 2000,
+      "03_fist": 2000,
+      "04_fist_moved": 2000,
+      "05_thumb": 2000,
+      "06_index": 2000,
+      "07_ok": 2000,
+      "08_palm_moved": 2000,
+      "09_c": 2000,
+      "10_down": 2000
+    },
+    "class_ratio_percentages": {
+      "01_palm": 10.0,
+      "02_l": 10.0,
+      "03_fist": 10.0,
+      "04_fist_moved": 10.0,
+      "05_thumb": 10.0,
+      "06_index": 10.0,
+      "07_ok": 10.0,
+      "08_palm_moved": 10.0,
+      "09_c": 10.0,
+      "10_down": 10.0
+    }
+  },
+  "subject_statistics": {
+    "total_subjects": 10,
+    "subject_image_counts": {
+      "00": 2000,
+      "01": 2000,
+      "02": 2000,
+      "03": 2000,
+      "04": 2000,
+      "05": 2000,
+      "06": 2000,
+      "07": 2000,
+      "08": 2000,
+      "09": 2000
+    },
+    "subject_gesture_breakdown": {
+      "00": {
+        "01_palm": 200,
+        "02_l": 200,
+        "03_fist": 200,
+        "04_fist_moved": 200,
+        "05_thumb": 200,
+        "06_index": 200,
+        "07_ok": 200,
+        "08_palm_moved": 200,
+        "09_c": 200,
+        "10_down": 200
+      },
+      "01": {
+        "01_palm": 200,
+        "02_l": 200,
+        "03_fist": 200,
+        "04_fist_moved": 200,
+        "05_thumb": 200,
+        "06_index": 200,
+        "07_ok": 200,
+        "08_palm_moved": 200,
+        "09_c": 200,
+        "10_down": 200
+      },
+      "02": {
+        "01_palm": 200,
+        "02_l": 200,
+        "03_fist": 200,
+        "04_fist_moved": 200,
+        "05_thumb": 200,
+        "06_index": 200,
+        "07_ok": 200,
+        "08_palm_moved": 200,
+        "09_c": 200,
+        "10_down": 200
+      },
+      "03": {
+        "01_palm": 200,
+        "02_l": 200,
+        "03_fist": 200,
+        "04_fist_moved": 200,
+        "05_thumb": 200,
+        "06_index": 200,
+        "07_ok": 200,
+        "08_palm_moved": 200,
+        "09_c": 200,
+        "10_down": 200
+      },
+      "04": {
+        "01_palm": 200,
+        "02_l": 200,
+        "03_fist": 200,
+        "04_fist_moved": 200,
+        "05_thumb": 200,
+        "06_index": 200,
+        "07_ok": 200,
+        "08_palm_moved": 200,
+        "09_c": 200,
+        "10_down": 200
+      },
+      "05": {
+        "01_palm": 200,
+        "02_l": 200,
+        "03_fist": 200,
+        "04_fist_moved": 200,
+        "05_thumb": 200,
+        "06_index": 200,
+        "07_ok": 200,
+        "08_palm_moved": 200,
+        "09_c": 200,
+        "10_down": 200
+      },
+      "06": {
+        "01_palm": 200,
+        "02_l": 200,
+        "03_fist": 200,
+        "04_fist_moved": 200,
+        "05_thumb": 200,
+        "06_index": 200,
+        "07_ok": 200,
+        "08_palm_moved": 200,
+        "09_c": 200,
+        "10_down": 200
+      },
+      "07": {
+        "01_palm": 200,
+        "02_l": 200,
+        "03_fist": 200,
+        "04_fist_moved": 200,
+        "05_thumb": 200,
+        "06_index": 200,
+        "07_ok": 200,
+        "08_palm_moved": 200,
+        "09_c": 200,
+        "10_down": 200
+      },
+      "08": {
+        "01_palm": 200,
+        "02_l": 200,
+        "03_fist": 200,
+        "04_fist_moved": 200,
+        "05_thumb": 200,
+        "06_index": 200,
+        "07_ok": 200,
+        "08_palm_moved": 200,
+        "09_c": 200,
+        "10_down": 200
+      },
+      "09": {
+        "01_palm": 200,
+        "02_l": 200,
+        "03_fist": 200,
+        "04_fist_moved": 200,
+        "05_thumb": 200,
+        "06_index": 200,
+        "07_ok": 200,
+        "08_palm_moved": 200,
+        "09_c": 200,
+        "10_down": 200
+      }
+    }
+  },
+  "duplicate_statistics": {
+    "exact_duplicate_hashes_count": 388,
+    "duplicate_filenames_count": 0
+  }
+}

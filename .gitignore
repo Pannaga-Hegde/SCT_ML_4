@@ -1,38 +1,35 @@
 # Dataset
 archive/
 
-# Python cache
+# Python cache & build
 __pycache__/
 *.py[cod]
-
-# Pytest
+*$py.class
 .pytest_cache/
 
-# Virtual environment
+# Environments
 .venv/
 venv/
 env/
+.env
 
-# Jupyter
-.ipynb_checkpoints/
-
-# ML models
+# Model Checkpoints (exclude binary model weights)
 *.pth
 *.pt
 *.h5
 *.keras
 *.onnx
 
-# Training outputs
+# Temporary / Debug Outputs
+outputs/debug/
+outputs/inference/debug/
+outputs/inference/session_log.csv
 checkpoints/
 runs/
 logs/
-outputs/
 
-# IDE
+# IDE & OS
 .vscode/
 .idea/
-
-# OS
 .DS_Store
 Thumbs.db

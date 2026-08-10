@@ -1,0 +1,74 @@
+{
+    "dataset_name": "LeapGestRecog",
+    "dataset_version": "1.0.0",
+    "project_name": "GestureFlow",
+    "project_version": "0.1.0",
+    "generation_timestamp": "2026-08-06T15:56:30.156672",
+    "total_images": 20000,
+    "num_subjects": 10,
+    "num_classes": 10,
+    "subject_ids": [
+        "00",
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09"
+    ],
+    "class_names": [
+        "01_palm",
+        "02_l",
+        "03_fist",
+        "04_fist_moved",
+        "05_thumb",
+        "06_index",
+        "07_ok",
+        "08_palm_moved",
+        "09_c",
+        "10_down"
+    ],
+    "raw_image_size": [
+        640,
+        240
+    ],
+    "target_image_size": [
+        128,
+        128
+    ],
+    "channels": 1,
+    "color_space": "Infrared Grayscale",
+    "random_seed": 42,
+    "normalization": {
+        "mean": [
+            0.5
+        ],
+        "std": [
+            0.5
+        ]
+    },
+    "dataset_split": {
+        "train_subjects": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06"
+        ],
+        "val_subjects": [
+            "07",
+            "08"
+        ],
+        "test_subjects": [
+            "09"
+        ],
+        "train_images": 14000,
+        "val_images": 4000,
+        "test_images": 2000
+    }
+}

@@ -81,6 +81,8 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--dev", action="store_true", help="Start with Developer Mode enabled.")
     parser.add_argument("--confidence", type=float, default=0.70, help="Minimum confidence threshold.")
     parser.add_argument("--window", type=int, default=5, help="Prediction stabilizer window size.")
+    parser.add_argument("--mock", action="store_true", help="Run with synthetic frames for headless testing.")
+    parser.add_argument("--frames", type=int, default=0, help="Max frames to run in mock mode (0 for infinite).")
     return parser.parse_args()
 
 
@@ -166,11 +168,13 @@ def _append_session_log(
 # Main application loop
 # ─────────────────────────────────────────────────────────────────────────────
 
-def run_demo(cfg: InferenceConfig) -> None:
+def run_demo(cfg: InferenceConfig, mock: bool = False, max_frames: int = 0) -> None:
     """Execute the main webcam inference loop.
 
     Args:
         cfg: InferenceConfig instance controlling all runtime parameters.
+        mock: If True, run with synthetic frames for headless testing.
+        max_frames: Max frames to run before exiting (0 for continuous).
     """
     print("=" * 60)
     print("  GestureFlow — Real-Time Gesture Recognition")
@@ -178,14 +182,14 @@ def run_demo(cfg: InferenceConfig) -> None:
     print(f"  Checkpoint : {cfg.checkpoint_path}")
     print(f"  Device     : {cfg.device}")
     print(f"  Preprocess : {cfg.preprocess_mode.value}")
-    print(f"  Camera     : {cfg.camera_id}")
+    print(f"  Camera     : {'MOCK' if mock else cfg.camera_id}")
     print(f"  Threshold  : {cfg.confidence_threshold:.0%}")
     print("=" * 60)
     print("  Press H in the webcam window to toggle keyboard help.")
     print("=" * 60)
 
     # ── Initialise modules ──────────────────────────────────────────
-    camera = CameraStream(cfg)
+    camera = CameraStream(cfg, mock=mock)
     camera.start()
 
     detector = HandDetector(cfg)
@@ -223,10 +227,16 @@ def run_demo(cfg: InferenceConfig) -> None:
     cv2.namedWindow(_WIN_MAIN, cv2.WINDOW_NORMAL)
     cv2.resizeWindow(_WIN_MAIN, cfg.camera_width, cfg.camera_height)
 
-    print("\n  ✓ All modules loaded.  Window should appear shortly.\n")
+    print("\n  [OK] All modules loaded. Window active.\n")
 
+    frame_counter = 0
     try:
         while True:
+            if max_frames > 0 and frame_counter >= max_frames:
+                print(f"  Reached max frame limit ({max_frames}). Exiting loop.")
+                break
+            frame_counter += 1
+
             # ── Read frame ───────────────────────────────────────────
             frame = camera.read_frame()
             if frame is None:
@@ -430,7 +440,19 @@ def run_demo(cfg: InferenceConfig) -> None:
             print("  Gesture counts    :")
             for lbl, cnt in dist.most_common():
                 print(f"    {lbl:<22s} {cnt:>5d}")
-        print(f"  Session log       : {session_log_path}")
+        summary_path = cfg.output_dir / "session_summary.json"
+        summary_payload = {
+            "total_predictions": stabilizer.total_predictions,
+            "most_frequent_gesture": stabilizer.get_most_frequent_gesture(),
+            "gesture_counts": dict(stabilizer.gesture_counts),
+            "session_log_path": str(session_log_path),
+            "preprocess_mode": current_mode.value,
+            "confidence_threshold": cfg.confidence_threshold,
+        }
+        with open(summary_path, "w", encoding="utf-8") as f:
+            json.dump(summary_payload, f, indent=2)
+
+        print(f"  Session summary   : {summary_path}")
         print("=" * 60)
         print("  GestureFlow exited cleanly.")
 
@@ -451,7 +473,7 @@ def main() -> None:
     cfg.confidence_threshold = args.confidence
     cfg.prediction_window_size = args.window
 
-    run_demo(cfg)
+    run_demo(cfg, mock=args.mock, max_frames=args.frames)
 
 
 if __name__ == "__main__":

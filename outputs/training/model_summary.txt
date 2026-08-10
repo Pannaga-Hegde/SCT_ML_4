@@ -1,0 +1,36 @@
+================================================================================
+Model Summary: GestureCNN
+================================================================================
+Layer (type/name)                        Output Shape           Param #       
+--------------------------------------------------------------------------------
+block1.0 (Conv2d)                        [1, 32, 128, 128]      288           
+block1.1 (BatchNorm2d)                   [1, 32, 128, 128]      64            
+block1.2 (ReLU)                          [1, 32, 128, 128]      0             
+block1.3 (MaxPool2d)                     [1, 32, 64, 64]        0             
+block1.4 (Dropout2d)                     [1, 32, 64, 64]        0             
+block2.0 (Conv2d)                        [1, 64, 64, 64]        18,432        
+block2.1 (BatchNorm2d)                   [1, 64, 64, 64]        128           
+block2.2 (ReLU)                          [1, 64, 64, 64]        0             
+block2.3 (MaxPool2d)                     [1, 64, 32, 32]        0             
+block2.4 (Dropout2d)                     [1, 64, 32, 32]        0             
+block3.0 (Conv2d)                        [1, 128, 32, 32]       73,728        
+block3.1 (BatchNorm2d)                   [1, 128, 32, 32]       256           
+block3.2 (ReLU)                          [1, 128, 32, 32]       0             
+block3.3 (MaxPool2d)                     [1, 128, 16, 16]       0             
+block3.4 (Dropout2d)                     [1, 128, 16, 16]       0             
+block4.0 (Conv2d)                        [1, 256, 16, 16]       294,912       
+block4.1 (BatchNorm2d)                   [1, 256, 16, 16]       512           
+block4.2 (ReLU)                          [1, 256, 16, 16]       0             
+block4.3 (MaxPool2d)                     [1, 256, 8, 8]         0             
+block4.4 (Dropout2d)                     [1, 256, 8, 8]         0             
+global_pool (AdaptiveAvgPool2d)          [1, 256, 1, 1]         0             
+classifier.0 (Linear)                    [1, 128]               32,896        
+classifier.1 (ReLU)                      [1, 128]               0             
+classifier.2 (Dropout)                   [1, 128]               0             
+classifier.3 (Linear)                    [1, 10]                1,290         
+================================================================================
+Total params: 422,506
+Trainable params: 422,506
+Non-trainable params: 0
+Estimated FP32 Model Size: 1.612 MB (1,690,024 bytes)
+================================================================================

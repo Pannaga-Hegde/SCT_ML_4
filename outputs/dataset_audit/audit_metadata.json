@@ -1,0 +1,19 @@
+{
+  "audit_timestamp_utc": "2026-08-05T11:47:36.607840+00:00",
+  "dataset_name": "LeapGestRecog",
+  "dataset_version": "1.0.0",
+  "dataset_path": "C:\\Users\\panna\\OneDrive\\Desktop\\New folder (2)\\sct_ml_\\SCT_ML_4\\archive\\leapGestRecog",
+  "random_seed": 42,
+  "total_images_scanned": 20000,
+  "total_valid_images": 20000,
+  "total_corrupted_images": 0,
+  "total_classes": 10,
+  "total_subjects": 10,
+  "environment": {
+    "python_version": "3.11.15",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "opencv_version": "5.0.0",
+    "numpy_version": "2.4.6",
+    "matplotlib_version": "3.11.1"
+  }
+}

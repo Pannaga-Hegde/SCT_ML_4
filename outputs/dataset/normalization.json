@@ -1,0 +1,13 @@
+{
+    "mean": [
+        0.5
+    ],
+    "std": [
+        0.5
+    ],
+    "channels": 1,
+    "target_image_size": [
+        128,
+        128
+    ]
+}

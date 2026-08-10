@@ -11,10 +11,14 @@ import numpy as np
 
 try:
     import mediapipe as mp
-
+    try:
+        mp_solutions = mp.solutions
+    except AttributeError:
+        import mediapipe.python.solutions as mp_solutions
     MEDIAPIPE_AVAILABLE = True
-except ImportError:
+except Exception:
     mp = None
+    mp_solutions = None
     MEDIAPIPE_AVAILABLE = False
 
 from src.config.inference_config import InferenceConfig, inference_config
@@ -30,12 +34,12 @@ class MediaPipeHandDetector:
             cfg: InferenceConfig instance.
         """
         self.cfg = cfg
-        self.mp_available = MEDIAPIPE_AVAILABLE
+        self.mp_available = MEDIAPIPE_AVAILABLE and mp_solutions is not None
 
-        if self.mp_available:
-            self.mp_hands = mp.solutions.hands
-            self.mp_drawing = mp.solutions.drawing_utils
-            self.mp_drawing_styles = mp.solutions.drawing_styles
+        if self.mp_available and mp_solutions is not None:
+            self.mp_hands = mp_solutions.hands
+            self.mp_drawing = mp_solutions.drawing_utils
+            self.mp_drawing_styles = mp_solutions.drawing_styles
 
             self.hands = self.mp_hands.Hands(
                 static_image_mode=False,
@@ -135,3 +139,8 @@ class MediaPipeHandDetector:
         if self.hands is not None:
             self.hands.close()
             self.hands = None
+
+
+# Alias for backward compatibility / demo import
+HandDetector = MediaPipeHandDetector
+

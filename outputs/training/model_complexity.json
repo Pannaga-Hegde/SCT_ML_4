@@ -1,0 +1,481 @@
+{
+    "model_name": "GestureCNN",
+    "input_shape": [
+        1,
+        1,
+        128,
+        128
+    ],
+    "output_shape": [
+        1,
+        10
+    ],
+    "trainable_params": 422506,
+    "non_trainable_params": 0,
+    "total_params": 422506,
+    "model_size_bytes_fp32": 1690024,
+    "model_size_mb_fp32": 1.6117,
+    "total_macs": 233211274,
+    "total_flops": 466422548,
+    "layers": [
+        {
+            "layer_name": "block1.0",
+            "layer_type": "Conv2d",
+            "input_shape": [
+                1,
+                1,
+                128,
+                128
+            ],
+            "output_shape": [
+                1,
+                32,
+                128,
+                128
+            ],
+            "trainable_params": 288,
+            "non_trainable_params": 0,
+            "estimated_macs": 4718592
+        },
+        {
+            "layer_name": "block1.1",
+            "layer_type": "BatchNorm2d",
+            "input_shape": [
+                1,
+                32,
+                128,
+                128
+            ],
+            "output_shape": [
+                1,
+                32,
+                128,
+                128
+            ],
+            "trainable_params": 64,
+            "non_trainable_params": 0,
+            "estimated_macs": 1048576
+        },
+        {
+            "layer_name": "block1.2",
+            "layer_type": "ReLU",
+            "input_shape": [
+                1,
+                32,
+                128,
+                128
+            ],
+            "output_shape": [
+                1,
+                32,
+                128,
+                128
+            ],
+            "trainable_params": 0,
+            "non_trainable_params": 0,
+            "estimated_macs": 0
+        },
+        {
+            "layer_name": "block1.3",
+            "layer_type": "MaxPool2d",
+            "input_shape": [
+                1,
+                32,
+                128,
+                128
+            ],
+            "output_shape": [
+                1,
+                32,
+                64,
+                64
+            ],
+            "trainable_params": 0,
+            "non_trainable_params": 0,
+            "estimated_macs": 0
+        },
+        {
+            "layer_name": "block1.4",
+            "layer_type": "Dropout2d",
+            "input_shape": [
+                1,
+                32,
+                64,
+                64
+            ],
+            "output_shape": [
+                1,
+                32,
+                64,
+                64
+            ],
+            "trainable_params": 0,
+            "non_trainable_params": 0,
+            "estimated_macs": 0
+        },
+        {
+            "layer_name": "block2.0",
+            "layer_type": "Conv2d",
+            "input_shape": [
+                1,
+                32,
+                64,
+                64
+            ],
+            "output_shape": [
+                1,
+                64,
+                64,
+                64
+            ],
+            "trainable_params": 18432,
+            "non_trainable_params": 0,
+            "estimated_macs": 75497472
+        },
+        {
+            "layer_name": "block2.1",
+            "layer_type": "BatchNorm2d",
+            "input_shape": [
+                1,
+                64,
+                64,
+                64
+            ],
+            "output_shape": [
+                1,
+                64,
+                64,
+                64
+            ],
+            "trainable_params": 128,
+            "non_trainable_params": 0,
+            "estimated_macs": 524288
+        },
+        {
+            "layer_name": "block2.2",
+            "layer_type": "ReLU",
+            "input_shape": [
+                1,
+                64,
+                64,
+                64
+            ],
+            "output_shape": [
+                1,
+                64,
+                64,
+                64
+            ],
+            "trainable_params": 0,
+            "non_trainable_params": 0,
+            "estimated_macs": 0
+        },
+        {
+            "layer_name": "block2.3",
+            "layer_type": "MaxPool2d",
+            "input_shape": [
+                1,
+                64,
+                64,
+                64
+            ],
+            "output_shape": [
+                1,
+                64,
+                32,
+                32
+            ],
+            "trainable_params": 0,
+            "non_trainable_params": 0,
+            "estimated_macs": 0
+        },
+        {
+            "layer_name": "block2.4",
+            "layer_type": "Dropout2d",
+            "input_shape": [
+                1,
+                64,
+                32,
+                32
+            ],
+            "output_shape": [
+                1,
+                64,
+                32,
+                32
+            ],
+            "trainable_params": 0,
+            "non_trainable_params": 0,
+            "estimated_macs": 0
+        },
+        {
+            "layer_name": "block3.0",
+            "layer_type": "Conv2d",
+            "input_shape": [
+                1,
+                64,
+                32,
+                32
+            ],
+            "output_shape": [
+                1,
+                128,
+                32,
+                32
+            ],
+            "trainable_params": 73728,
+            "non_trainable_params": 0,
+            "estimated_macs": 75497472
+        },
+        {
+            "layer_name": "block3.1",
+            "layer_type": "BatchNorm2d",
+            "input_shape": [
+                1,
+                128,
+                32,
+                32
+            ],
+            "output_shape": [
+                1,
+                128,
+                32,
+                32
+            ],
+            "trainable_params": 256,
+            "non_trainable_params": 0,
+            "estimated_macs": 262144
+        },
+        {
+            "layer_name": "block3.2",
+            "layer_type": "ReLU",
+            "input_shape": [
+                1,
+                128,
+                32,
+                32
+            ],
+            "output_shape": [
+                1,
+                128,
+                32,
+                32
+            ],
+            "trainable_params": 0,
+            "non_trainable_params": 0,
+            "estimated_macs": 0
+        },
+        {
+            "layer_name": "block3.3",
+            "layer_type": "MaxPool2d",
+            "input_shape": [
+                1,
+                128,
+                32,
+                32
+            ],
+            "output_shape": [
+                1,
+                128,
+                16,
+                16
+            ],
+            "trainable_params": 0,
+            "non_trainable_params": 0,
+            "estimated_macs": 0
+        },
+        {
+            "layer_name": "block3.4",
+            "layer_type": "Dropout2d",
+            "input_shape": [
+                1,
+                128,
+                16,
+                16
+            ],
+            "output_shape": [
+                1,
+                128,
+                16,
+                16
+            ],
+            "trainable_params": 0,
+            "non_trainable_params": 0,
+            "estimated_macs": 0
+        },
+        {
+            "layer_name": "block4.0",
+            "layer_type": "Conv2d",
+            "input_shape": [
+                1,
+                128,
+                16,
+                16
+            ],
+            "output_shape": [
+                1,
+                256,
+                16,
+                16
+            ],
+            "trainable_params": 294912,
+            "non_trainable_params": 0,
+            "estimated_macs": 75497472
+        },
+        {
+            "layer_name": "block4.1",
+            "layer_type": "BatchNorm2d",
+            "input_shape": [
+                1,
+                256,
+                16,
+                16
+            ],
+            "output_shape": [
+                1,
+                256,
+                16,
+                16
+            ],
+            "trainable_params": 512,
+            "non_trainable_params": 0,
+            "estimated_macs": 131072
+        },
+        {
+            "layer_name": "block4.2",
+            "layer_type": "ReLU",
+            "input_shape": [
+                1,
+                256,
+                16,
+                16
+            ],
+            "output_shape": [
+                1,
+                256,
+                16,
+                16
+            ],
+            "trainable_params": 0,
+            "non_trainable_params": 0,
+            "estimated_macs": 0
+        },
+        {
+            "layer_name": "block4.3",
+            "layer_type": "MaxPool2d",
+            "input_shape": [
+                1,
+                256,
+                16,
+                16
+            ],
+            "output_shape": [
+                1,
+                256,
+                8,
+                8
+            ],
+            "trainable_params": 0,
+            "non_trainable_params": 0,
+            "estimated_macs": 0
+        },
+        {
+            "layer_name": "block4.4",
+            "layer_type": "Dropout2d",
+            "input_shape": [
+                1,
+                256,
+                8,
+                8
+            ],
+            "output_shape": [
+                1,
+                256,
+                8,
+                8
+            ],
+            "trainable_params": 0,
+            "non_trainable_params": 0,
+            "estimated_macs": 0
+        },
+        {
+            "layer_name": "global_pool",
+            "layer_type": "AdaptiveAvgPool2d",
+            "input_shape": [
+                1,
+                256,
+                8,
+                8
+            ],
+            "output_shape": [
+                1,
+                256,
+                1,
+                1
+            ],
+            "trainable_params": 0,
+            "non_trainable_params": 0,
+            "estimated_macs": 0
+        },
+        {
+            "layer_name": "classifier.0",
+            "layer_type": "Linear",
+            "input_shape": [
+                1,
+                256
+            ],
+            "output_shape": [
+                1,
+                128
+            ],
+            "trainable_params": 32896,
+            "non_trainable_params": 0,
+            "estimated_macs": 32896
+        },
+        {
+            "layer_name": "classifier.1",
+            "layer_type": "ReLU",
+            "input_shape": [
+                1,
+                128
+            ],
+            "output_shape": [
+                1,
+                128
+            ],
+            "trainable_params": 0,
+            "non_trainable_params": 0,
+            "estimated_macs": 0
+        },
+        {
+            "layer_name": "classifier.2",
+            "layer_type": "Dropout",
+            "input_shape": [
+                1,
+                128
+            ],
+            "output_shape": [
+                1,
+                128
+            ],
+            "trainable_params": 0,
+            "non_trainable_params": 0,
+            "estimated_macs": 0
+        },
+        {
+            "layer_name": "classifier.3",
+            "layer_type": "Linear",
+            "input_shape": [
+                1,
+                128
+            ],
+            "output_shape": [
+                1,
+                10
+            ],
+            "trainable_params": 1290,
+            "non_trainable_params": 0,
+            "estimated_macs": 1290
+        }
+    ]
+}

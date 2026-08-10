@@ -1,0 +1,8 @@
+{
+  "total_predictions": 0,
+  "most_frequent_gesture": "N/A",
+  "gesture_counts": {},
+  "session_log_path": "C:\\Users\\panna\\OneDrive\\Desktop\\New folder (2)\\sct_ml_\\SCT_ML_4\\outputs\\inference\\session_log.csv",
+  "preprocess_mode": "gray",
+  "confidence_threshold": 0.7
+}

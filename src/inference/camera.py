@@ -110,3 +110,58 @@ class WebcamCapture:
             self.cap.release()
             self.cap = None
         self.is_opened = False
+
+
+class CameraStream:
+    """High-level camera stream wrapper supporting hardware and synthetic mock mode."""
+
+    def __init__(self, cfg: InferenceConfig = inference_config, mock: bool = False) -> None:
+        """Initialize CameraStream.
+
+        Args:
+            cfg: InferenceConfig instance.
+            mock: If True, generate synthetic mock frames for headless execution.
+        """
+        self.cfg = cfg
+        self.mock = mock
+        self.webcam = WebcamCapture(cfg)
+        self.is_running = False
+
+    def start(self, camera_id: Optional[int] = None) -> bool:
+        """Start the camera stream."""
+        if self.mock:
+            self.is_running = True
+            return True
+        success = self.webcam.open(camera_id)
+        self.is_running = success
+        return success
+
+    def read_frame(self) -> Optional[np.ndarray]:
+        """Read latest frame array. Returns None if stream closed or frame unreadable."""
+        if not self.is_running:
+            return None
+        if self.mock:
+            # Generate synthetic 720p dark gray BGR image with simulated hand patch
+            frame = np.full((self.cfg.camera_height, self.cfg.camera_width, 3), 40, dtype=np.uint8)
+            # Draw sample ROI region in center
+            h, w = self.cfg.camera_height, self.cfg.camera_width
+            cv2.rectangle(frame, (w // 4, h // 4), (3 * w // 4, 3 * h // 4), (120, 120, 120), -1)
+            time.sleep(0.01)
+            return frame
+
+        ret, frame = self.webcam.read_frame()
+        return frame if ret else None
+
+    def stop(self) -> None:
+        """Stop camera stream cleanly."""
+        if not self.mock:
+            self.webcam.release()
+        self.is_running = False
+
+    def get_fps(self) -> float:
+        """Return current real-time FPS readout."""
+        if self.mock:
+            return 30.0
+        return float(self.webcam.current_fps)
+
+
