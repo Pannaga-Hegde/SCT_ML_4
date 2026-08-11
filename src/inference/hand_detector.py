@@ -11,12 +11,21 @@ import numpy as np
 
 try:
     import mediapipe as mp
-    try:
-        mp_solutions = mp.solutions
-    except AttributeError:
-        import mediapipe.python.solutions as mp_solutions
+    if not hasattr(mp, "solutions"):
+        # mediapipe 1.0.0+ dropped the legacy solutions API — need 0.10.x
+        raise ImportError(
+            f"mediapipe {getattr(mp, '__version__', 'unknown')} does not expose "
+            "mp.solutions.hands. Install mediapipe<0.10.14 (e.g. pip install "
+            "mediapipe==0.10.13 --no-deps)."
+        )
+    mp_solutions = mp.solutions
     MEDIAPIPE_AVAILABLE = True
-except Exception:
+except ImportError as _mp_import_err:
+    import warnings
+    warnings.warn(
+        f"[GestureFlow] MediaPipe unavailable — hand detection disabled. "
+        f"Reason: {_mp_import_err}"
+    )
     mp = None
     mp_solutions = None
     MEDIAPIPE_AVAILABLE = False
@@ -86,7 +95,17 @@ class MediaPipeHandDetector:
             return default_result
 
         rgb_frame = cv2.cvtColor(bgr_frame, cv2.COLOR_BGR2RGB)
-        results = self.hands.process(rgb_frame)
+        # Make frame writeable=False for MediaPipe performance
+        rgb_frame.flags.writeable = False
+        try:
+            results = self.hands.process(rgb_frame)
+        except Exception as exc:  # noqa: BLE001
+            import warnings
+            warnings.warn(f"[HandDetector] MediaPipe process() raised: {exc}")
+            default_result["latency_ms"] = (time.time() - start_time) * 1000.0
+            return default_result
+        finally:
+            rgb_frame.flags.writeable = True
         latency_ms = (time.time() - start_time) * 1000.0
 
         if not results.multi_hand_landmarks:

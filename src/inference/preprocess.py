@@ -102,9 +102,9 @@ class HandROIPreprocessor:
         elif active_mode == PreprocessMode.CLAHE:
             gray = self.clahe.apply(gray)
 
-        # 3. Bilinear Resize to Target Resolution (128x128)
+        # 3. Resize to Target Resolution (128x128) using INTER_AREA for area-based downsampling
         target_w, target_h = self.cfg.target_image_size
-        gray_resized = cv2.resize(gray, (target_w, target_h), interpolation=cv2.INTER_LINEAR)
+        gray_resized = cv2.resize(gray, (target_w, target_h), interpolation=cv2.INTER_AREA)
 
         return gray_resized
 

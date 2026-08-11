@@ -254,7 +254,9 @@ def run_demo(cfg: InferenceConfig, mock: bool = False, max_frames: int = 0) -> N
             last_mediapipe_ms = (time.time() - mp_start) * 1000.0
 
             hand_detected = detection_result["hand_detected"]
-            landmark_list = detection_result.get("landmark_list") or []
+            # "landmarks" contains normalized (x, y, z) tuples; extract (x, y) for draw_landmarks
+            raw_landmarks = detection_result.get("landmarks") or []
+            landmark_list = [(lm[0], lm[1]) for lm in raw_landmarks] if raw_landmarks else []
             bbox = detection_result.get("bbox")
 
             # ── CNN Inference (gated by pause) ───────────────────────
