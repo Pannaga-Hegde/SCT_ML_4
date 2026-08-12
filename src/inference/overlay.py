@@ -149,15 +149,19 @@ class OverlayRenderer:
     ) -> None:
         """Draw the main gesture label banner at top-left of frame."""
         h, w = frame.shape[:2]
-        display_label = label.upper().replace("_", " ")
+        if label == "---":
+            display_label = "GESTURE: —"
+        else:
+            display_label = f"GESTURE: {label.upper().replace('_', ' ')}"
+            
         if paused:
             display_label = f"[PAUSED] {display_label}"
 
-        color = _confidence_color(confidence) if is_stable else SLATE
+        color = _confidence_color(confidence) if is_stable and label != "---" else SLATE
 
         # Background panel
-        _draw_alpha_rect(frame, 8, 8, 340, 62, BG, alpha=0.65)
-        _put_text(frame, display_label, (16, 45), color=color, scale=0.95, thickness=2)
+        _draw_alpha_rect(frame, 8, 8, 380, 62, BG, alpha=0.65)
+        _put_text(frame, display_label, (16, 45), color=color, scale=0.85, thickness=2)
 
     def draw_telemetry_panel(
         self,
@@ -210,8 +214,11 @@ class OverlayRenderer:
         _put_text(frame, f"Mode: {preprocess_mode}", (dx, y), color=BLUE)
         y += 22
 
-        conf_color = _confidence_color(confidence)
-        _put_text(frame, f"Conf: {confidence * 100:5.1f}%", (dx, y), color=conf_color)
+        if hand_detected:
+            conf_color = _confidence_color(confidence)
+            _put_text(frame, f"Conf: {confidence * 100:5.1f}%", (dx, y), color=conf_color)
+        else:
+            _put_text(frame, f"Conf: —", (dx, y), color=SLATE)
         y += 22
 
         status_color = EMERALD if hand_detected else ROSE

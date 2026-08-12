@@ -1,0 +1,143 @@
+{
+  "classes": [
+    "01_palm",
+    "02_l",
+    "03_fist",
+    "04_fist_moved",
+    "05_thumb",
+    "06_index",
+    "07_ok",
+    "08_palm_moved",
+    "09_c",
+    "10_down"
+  ],
+  "split_counts": {
+    "01_palm": {
+      "train": 36,
+      "val": 6,
+      "test": 6
+    },
+    "02_l": {
+      "train": 36,
+      "val": 6,
+      "test": 6
+    },
+    "03_fist": {
+      "train": 36,
+      "val": 6,
+      "test": 6
+    },
+    "04_fist_moved": {
+      "train": 36,
+      "val": 6,
+      "test": 6
+    },
+    "05_thumb": {
+      "train": 36,
+      "val": 6,
+      "test": 6
+    },
+    "06_index": {
+      "train": 36,
+      "val": 6,
+      "test": 6
+    },
+    "07_ok": {
+      "train": 36,
+      "val": 6,
+      "test": 6
+    },
+    "08_palm_moved": {
+      "train": 36,
+      "val": 6,
+      "test": 6
+    },
+    "09_c": {
+      "train": 36,
+      "val": 6,
+      "test": 6
+    },
+    "10_down": {
+      "train": 36,
+      "val": 6,
+      "test": 6
+    }
+  },
+  "raw_counts": {
+    "01_palm": {
+      "train_raw": 18,
+      "val_raw": 6,
+      "test_raw": 6,
+      "total_raw": 30
+    },
+    "02_l": {
+      "train_raw": 18,
+      "val_raw": 6,
+      "test_raw": 6,
+      "total_raw": 30
+    },
+    "03_fist": {
+      "train_raw": 18,
+      "val_raw": 6,
+      "test_raw": 6,
+      "total_raw": 30
+    },
+    "04_fist_moved": {
+      "train_raw": 18,
+      "val_raw": 6,
+      "test_raw": 6,
+      "total_raw": 30
+    },
+    "05_thumb": {
+      "train_raw": 18,
+      "val_raw": 6,
+      "test_raw": 6,
+      "total_raw": 30
+    },
+    "06_index": {
+      "train_raw": 18,
+      "val_raw": 6,
+      "test_raw": 6,
+      "total_raw": 30
+    },
+    "07_ok": {
+      "train_raw": 18,
+      "val_raw": 6,
+      "test_raw": 6,
+      "total_raw": 30
+    },
+    "08_palm_moved": {
+      "train_raw": 18,
+      "val_raw": 6,
+      "test_raw": 6,
+      "total_raw": 30
+    },
+    "09_c": {
+      "train_raw": 18,
+      "val_raw": 6,
+      "test_raw": 6,
+      "total_raw": 30
+    },
+    "10_down": {
+      "train_raw": 18,
+      "val_raw": 6,
+      "test_raw": 6,
+      "total_raw": 30
+    }
+  },
+  "session_counts": {
+    "01_palm": 3,
+    "02_l": 3,
+    "03_fist": 3,
+    "04_fist_moved": 3,
+    "05_thumb": 3,
+    "06_index": 3,
+    "07_ok": 3,
+    "08_palm_moved": 3,
+    "09_c": 3,
+    "10_down": 3
+  },
+  "total_train": 360,
+  "total_val": 60,
+  "total_test": 60
+}

@@ -1,0 +1,7 @@
+experiment,val_acc,val_f1,test_acc,test_f1,test_precision,test_recall,mean_conf,high_conf_errors,active_classes,latency_ms
+A: Current 63-feature RBF SVM,0.2000,0.3350,0.3684,0.2681,0.2999,0.3281,0.4388,0,6,0.0482
+B: 63 coords + Engineered (86-feat) SVM,0.2889,0.3115,0.3684,0.2446,0.2832,0.2704,0.4374,4,6,0.0294
+C: Engineered features only (23-feat) SVM,0.2889,0.3387,0.4079,0.3189,0.3199,0.3567,0.4294,1,7,0.0215
+D: Random Forest (86-feat),0.3111,0.2810,0.3289,0.2898,0.3418,0.3813,0.5039,7,7,0.3099
+E: Tuned RBF SVM (86-feat),0.2889,0.3743,0.3684,0.2870,0.3409,0.3016,0.4389,4,7,0.0212
+F: Lightweight MLP (86-feat),0.1333,0.1254,0.3026,0.1929,0.2202,0.2370,0.2053,1,7,0.0214

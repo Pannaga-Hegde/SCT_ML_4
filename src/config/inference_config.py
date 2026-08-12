@@ -32,6 +32,19 @@ class InferenceConfig:
         / "checkpoints"
         / "best_model.pth"
     )
+    adapted_checkpoint_path: Path = field(
+        default_factory=lambda: Path(__file__).resolve().parent.parent.parent
+        / "models"
+        / "checkpoints"
+        / "webcam_adapted_model.pth"
+    )
+    landmark_checkpoint_path: Path = field(
+        default_factory=lambda: Path(__file__).resolve().parent.parent.parent
+        / "models"
+        / "checkpoints"
+        / "landmark_classifier.joblib"
+    )
+    model_choice: str = "landmark"  # "landmark", "adapted", or "original"
     output_dir: Path = field(
         default_factory=lambda: Path(__file__).resolve().parent.parent.parent
         / "outputs"

@@ -1,0 +1,70 @@
+{
+  "seed": 42,
+  "classes": [
+    "01_palm",
+    "02_l",
+    "03_fist",
+    "04_fist_moved",
+    "05_thumb",
+    "06_index",
+    "07_ok",
+    "08_palm_moved",
+    "09_c",
+    "10_down"
+  ],
+  "split_counts": {
+    "01_palm": {
+      "train": 130,
+      "val": 9,
+      "test": 8
+    },
+    "02_l": {
+      "train": 260,
+      "val": 4,
+      "test": 7
+    },
+    "03_fist": {
+      "train": 50,
+      "val": 12,
+      "test": 7
+    },
+    "04_fist_moved": {
+      "train": 70,
+      "val": 2,
+      "test": 13
+    },
+    "05_thumb": {
+      "train": 60,
+      "val": 20,
+      "test": 20
+    },
+    "06_index": {
+      "train": 50,
+      "val": 8,
+      "test": 8
+    },
+    "07_ok": {
+      "train": 110,
+      "val": 3,
+      "test": 1
+    },
+    "08_palm_moved": {
+      "train": 140,
+      "val": 5,
+      "test": 5
+    },
+    "09_c": {
+      "train": 20,
+      "val": 11,
+      "test": 7
+    },
+    "10_down": {
+      "train": 30,
+      "val": 3,
+      "test": 3
+    }
+  },
+  "total_train": 920,
+  "total_val": 77,
+  "total_test": 79
+}

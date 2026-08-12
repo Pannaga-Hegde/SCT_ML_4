@@ -95,17 +95,9 @@ class MediaPipeHandDetector:
             return default_result
 
         rgb_frame = cv2.cvtColor(bgr_frame, cv2.COLOR_BGR2RGB)
-        # Make frame writeable=False for MediaPipe performance
-        rgb_frame.flags.writeable = False
-        try:
-            results = self.hands.process(rgb_frame)
-        except Exception as exc:  # noqa: BLE001
-            import warnings
-            warnings.warn(f"[HandDetector] MediaPipe process() raised: {exc}")
-            default_result["latency_ms"] = (time.time() - start_time) * 1000.0
-            return default_result
-        finally:
-            rgb_frame.flags.writeable = True
+        rgb_frame = np.ascontiguousarray(rgb_frame)
+        
+        results = self.hands.process(rgb_frame)
         latency_ms = (time.time() - start_time) * 1000.0
 
         if not results.multi_hand_landmarks:

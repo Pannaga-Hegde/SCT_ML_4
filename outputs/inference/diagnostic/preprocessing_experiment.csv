@@ -1,0 +1,8 @@
+Variant,Overall_Accuracy,Correct_Count,Total_Count,Mean_Confidence,Incorrect_Mean_Confidence,High_Conf_Wrong_GT70,Num_Predicted_Classes,Prob_Max_Mean,Prob_Max_Std
+A (Baseline Grayscale),22.22%,14,63,0.8176,0.8127,35,4,0.8176,0.1772
+B (Min-Max Norm),23.81%,15,63,0.8737,0.8685,41,4,0.8737,0.1620
+C (Zero-Mean/Unit-Var),14.29%,9,63,0.6332,0.6474,22,4,0.6332,0.1884
+D (Histogram Matching),1.59%,1,63,0.9183,0.9223,57,4,0.9183,0.1233
+E (Inversion + Scaling),1.59%,1,63,0.5991,0.5988,21,4,0.5991,0.1486
+F (Tight ROI + Baseline),15.87%,10,63,0.8281,0.8301,43,7,0.8281,0.1831
+G (Tight ROI + Best Norm: B),15.87%,10,63,0.8594,0.8524,42,6,0.8594,0.1660

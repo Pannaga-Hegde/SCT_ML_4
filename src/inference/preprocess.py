@@ -49,20 +49,50 @@ class HandROIPreprocessor:
             box_w = x_max - x_min
             box_h = y_max - y_min
 
+            # First add normal padding
             pad_w = int(box_w * pad_pct)
             pad_h = int(box_h * pad_pct)
+            
+            x1 = x_min - pad_w
+            y1 = y_min - pad_h
+            x2 = x_max + pad_w
+            y2 = y_max + pad_h
+            
+            curr_w = x2 - x1
+            curr_h = y2 - y1
+            
+            # Force aspect ratio to match training (640:240 = 8:3)
+            # If current ratio < 8/3, we need to increase width
+            # If current ratio > 8/3, we need to increase height
+            target_ratio = 640.0 / 240.0
+            if curr_w / max(1, curr_h) < target_ratio:
+                # Too tall, increase width
+                new_w = int(curr_h * target_ratio)
+                diff = new_w - curr_w
+                x1 -= diff // 2
+                x2 += diff - (diff // 2)
+            else:
+                # Too wide, increase height
+                new_h = int(curr_w / target_ratio)
+                diff = new_h - curr_h
+                y1 -= diff // 2
+                y2 += diff - (diff // 2)
 
-            x_min_pad = max(0, x_min - pad_w)
-            y_min_pad = max(0, y_min - pad_h)
-            x_max_pad = min(w, x_max + pad_w)
-            y_max_pad = min(h, y_max + pad_h)
+            x_min_pad = max(0, x1)
+            y_min_pad = max(0, y1)
+            x_max_pad = min(w, x2)
+            y_max_pad = min(h, y2)
         else:
-            # Fallback: Crop center square of frame if no bbox detected
-            min_dim = min(h, w)
+            # Fallback: Crop center of frame if no bbox detected, keeping 8:3 ratio
+            target_ratio = 640.0 / 240.0
             cx, cy = w // 2, h // 2
-            half = min_dim // 3
-            x_min_pad, x_max_pad = cx - half, cx + half
-            y_min_pad, y_max_pad = cy - half, cy + half
+            # Max possible width or height
+            new_w = min(w, int(h * target_ratio))
+            new_h = int(new_w / target_ratio)
+            x_min_pad = cx - new_w // 2
+            x_max_pad = cx + new_w // 2
+            y_min_pad = cy - new_h // 2
+            y_max_pad = cy + new_h // 2
 
         roi_bgr = bgr_frame[y_min_pad:y_max_pad, x_min_pad:x_max_pad]
 

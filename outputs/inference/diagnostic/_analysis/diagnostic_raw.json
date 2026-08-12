@@ -1,0 +1,665 @@
+{
+  "n_samples": 63,
+  "distribution": {
+    "01_palm": 9,
+    "02_l": 16,
+    "03_fist": 7,
+    "04_fist_moved": 2,
+    "05_thumb": 6,
+    "06_index": 5,
+    "07_ok": 4,
+    "08_palm_moved": 5,
+    "09_c": 9
+  },
+  "accuracy": {
+    "gray": {
+      "overall": 0.2222222222222222,
+      "correct": 14,
+      "total": 63,
+      "per_class": {
+        "01_palm": {
+          "correct": 0,
+          "total": 9
+        },
+        "02_l": {
+          "correct": 11,
+          "total": 16
+        },
+        "03_fist": {
+          "correct": 0,
+          "total": 7
+        },
+        "04_fist_moved": {
+          "correct": 0,
+          "total": 2
+        },
+        "05_thumb": {
+          "correct": 0,
+          "total": 6
+        },
+        "06_index": {
+          "correct": 0,
+          "total": 5
+        },
+        "07_ok": {
+          "correct": 0,
+          "total": 4
+        },
+        "08_palm_moved": {
+          "correct": 0,
+          "total": 5
+        },
+        "09_c": {
+          "correct": 3,
+          "total": 9
+        },
+        "10_down": {
+          "correct": 0,
+          "total": 0
+        }
+      }
+    },
+    "hist_eq": {
+      "overall": 0.12698412698412698,
+      "correct": 8,
+      "total": 63,
+      "per_class": {
+        "01_palm": {
+          "correct": 0,
+          "total": 9
+        },
+        "02_l": {
+          "correct": 4,
+          "total": 16
+        },
+        "03_fist": {
+          "correct": 0,
+          "total": 7
+        },
+        "04_fist_moved": {
+          "correct": 0,
+          "total": 2
+        },
+        "05_thumb": {
+          "correct": 0,
+          "total": 6
+        },
+        "06_index": {
+          "correct": 0,
+          "total": 5
+        },
+        "07_ok": {
+          "correct": 1,
+          "total": 4
+        },
+        "08_palm_moved": {
+          "correct": 0,
+          "total": 5
+        },
+        "09_c": {
+          "correct": 3,
+          "total": 9
+        },
+        "10_down": {
+          "correct": 0,
+          "total": 0
+        }
+      }
+    },
+    "clahe": {
+      "overall": 0.2222222222222222,
+      "correct": 14,
+      "total": 63,
+      "per_class": {
+        "01_palm": {
+          "correct": 0,
+          "total": 9
+        },
+        "02_l": {
+          "correct": 6,
+          "total": 16
+        },
+        "03_fist": {
+          "correct": 0,
+          "total": 7
+        },
+        "04_fist_moved": {
+          "correct": 0,
+          "total": 2
+        },
+        "05_thumb": {
+          "correct": 0,
+          "total": 6
+        },
+        "06_index": {
+          "correct": 0,
+          "total": 5
+        },
+        "07_ok": {
+          "correct": 3,
+          "total": 4
+        },
+        "08_palm_moved": {
+          "correct": 0,
+          "total": 5
+        },
+        "09_c": {
+          "correct": 5,
+          "total": 9
+        },
+        "10_down": {
+          "correct": 0,
+          "total": 0
+        }
+      }
+    }
+  },
+  "confusion_matrices": {
+    "gray": [
+      [
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0
+      ],
+      [
+        1,
+        11,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0
+      ],
+      [
+        1,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "hist_eq": [
+      [
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0
+      ],
+      [
+        3,
+        4,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        8,
+        0
+      ],
+      [
+        3,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        3,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        3,
+        0
+      ],
+      [
+        3,
+        2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "clahe": [
+      [
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        7,
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        5,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "palm_bias": {
+    "gray": {
+      "palm_pred_for_non_palm": 8,
+      "non_palm_total": 54,
+      "rate": 0.14814814814814814,
+      "breakdown": {
+        "02_l": 1,
+        "03_fist": 4,
+        "07_ok": 1,
+        "08_palm_moved": 1,
+        "09_c": 1
+      }
+    },
+    "hist_eq": {
+      "palm_pred_for_non_palm": 14,
+      "non_palm_total": 54,
+      "rate": 0.25925925925925924,
+      "breakdown": {
+        "02_l": 3,
+        "03_fist": 3,
+        "04_fist_moved": 1,
+        "05_thumb": 2,
+        "06_index": 1,
+        "08_palm_moved": 1,
+        "09_c": 3
+      }
+    },
+    "clahe": {
+      "palm_pred_for_non_palm": 0,
+      "non_palm_total": 54,
+      "rate": 0.0,
+      "breakdown": {}
+    }
+  },
+  "confidence": {
+    "gray": {
+      "correct_mean": 0.834368633372443,
+      "correct_std": 0.16569736276779742,
+      "correct_min": 0.5098298192024231,
+      "correct_max": 0.9998024106025696,
+      "correct_count": 14,
+      "incorrect_mean": 0.812529916665992,
+      "incorrect_std": 0.17996176804606917,
+      "incorrect_min": 0.40265533328056335,
+      "incorrect_max": 0.9997783303260803,
+      "incorrect_count": 49
+    },
+    "hist_eq": {
+      "correct_mean": 0.914313867688179,
+      "correct_std": 0.11928566684984737,
+      "correct_min": 0.6508063673973083,
+      "correct_max": 0.99887615442276,
+      "correct_count": 8,
+      "incorrect_mean": 0.8309801952405409,
+      "incorrect_std": 0.16202003098157303,
+      "incorrect_min": 0.48086801171302795,
+      "incorrect_max": 0.9996850490570068,
+      "incorrect_count": 55
+    },
+    "clahe": {
+      "correct_mean": 0.8955412634781429,
+      "correct_std": 0.1156079832722635,
+      "correct_min": 0.5608941316604614,
+      "correct_max": 0.9982733726501465,
+      "correct_count": 14,
+      "incorrect_mean": 0.8133909933421076,
+      "incorrect_std": 0.1768162713029459,
+      "incorrect_min": 0.4811345040798187,
+      "incorrect_max": 0.9997631907463074,
+      "incorrect_count": 49
+    }
+  },
+  "mode_agreement": {
+    "all_correct": 5,
+    "partial_correct": 15,
+    "none_correct": 43,
+    "total": 63,
+    "mode_exclusive_wins": {
+      "gray": 9,
+      "clahe": 9,
+      "hist_eq": 3
+    }
+  },
+  "roi_dimensions": {
+    "overall": {
+      "count": 63,
+      "width_mean": 1054.952380952381,
+      "width_std": 166.1926047073408,
+      "width_min": 688,
+      "width_max": 1280,
+      "height_mean": 505.1587301587302,
+      "height_std": 114.46621548420474,
+      "height_min": 290,
+      "height_max": 706,
+      "ratio_mean": 2.1418425689574776,
+      "ratio_std": 0.3048973170730445,
+      "training_target_ratio": 2.6666666666666665
+    },
+    "correct": {
+      "count": 14,
+      "width_mean": 1122.2857142857142,
+      "height_mean": 560.6428571428571,
+      "ratio_mean": 2.016215015152425
+    },
+    "incorrect": {
+      "count": 49,
+      "width_mean": 1035.7142857142858,
+      "height_mean": 489.3061224489796,
+      "ratio_mean": 2.1777361557589203
+    }
+  },
+  "domain_comparison": {
+    "training": {
+      "n_samples": 180,
+      "pixel_mean": 29.583344184027776,
+      "pixel_std_of_means": 6.44583467046884,
+      "pixel_mean_std": 58.12989927902676
+    },
+    "webcam_gray": {
+      "n_samples": 63,
+      "pixel_mean": 133.83019050719247,
+      "pixel_std_of_means": 8.504875094616848,
+      "pixel_mean_std": 66.35048094353677,
+      "bhattacharyya_distance": 0.8459254931023665
+    },
+    "webcam_hist_eq": {
+      "n_samples": 63,
+      "pixel_mean": 128.5805441235739,
+      "pixel_std_of_means": 0.16348895817264292,
+      "pixel_mean_std": 73.31099945019966,
+      "bhattacharyya_distance": 0.665457865355198
+    },
+    "webcam_clahe": {
+      "n_samples": 63,
+      "pixel_mean": 136.24501255580358,
+      "pixel_std_of_means": 6.882759438862271,
+      "pixel_mean_std": 65.22378650804792,
+      "bhattacharyya_distance": 0.8215611297311413
+    }
+  }
+}

@@ -1,34 +1,27 @@
 """GestureFlow — Real-Time Webcam Gesture Recognition Demo.
 
-Main application entry point.  Runs the complete end-to-end inference pipeline:
+Main application entry point. Runs complete end-to-end inference pipeline for both CNN and LANDMARK models:
 
-  Webcam → CameraStream → HandDetector → HandROIPreprocessor
-        → GesturePredictor → PredictionStabilizer → OverlayRenderer → Display
+  Webcam → CameraStream → HandDetector → [HandROIPreprocessor → CNN Predictor / Landmark Predictor]
+        → PredictionStabilizer → OverlayRenderer → Display
 
-Keyboard controls (press key while the OpenCV window is focused):
+Keyboard controls:
   Q  — Quit
   R  — Reset session statistics
+  T  — Toggle model (LANDMARK ↔ ADAPTED CNN ↔ ORIGINAL CNN)
   M  — Toggle mirror (horizontal flip)
   L  — Toggle MediaPipe landmark rendering
   B  — Toggle bounding box
   S  — Toggle skeleton rendering
   F  — Toggle FPS display
   P  — Pause / resume prediction
-  C  — Capture screenshot  →  outputs/inference/screenshots/
-  O  — Save debug bundle  →  outputs/inference/debug/
-  H  — Hide / show full telemetry HUD
+  C  — Capture screenshot
+  O  — Save debug bundle
+  H  — Toggle telemetry HUD
   D  — Toggle Developer Mode window
   1  — Preprocessing mode: Grayscale
   2  — Preprocessing mode: Histogram Equalization
   3  — Preprocessing mode: CLAHE
-  SPACE — Quick ROI snapshot
-
-Usage:
-  python -m src.inference.demo                 # default camera 0
-  python -m src.inference.demo --camera 1      # external camera
-  python -m src.inference.demo --no-mirror
-  python -m src.inference.demo --mode clahe
-  python -m src.inference.demo --dev           # start with Developer Mode on
 """
 
 import argparse
@@ -51,7 +44,6 @@ from src.inference.predictor import GesturePredictor
 from src.inference.preprocess import HandROIPreprocessor
 from src.inference.stabilizer import PredictionStabilizer
 
-
 _MODE_MAP = {
     "gray": PreprocessMode.GRAY,
     "hist_eq": PreprocessMode.HIST_EQ,
@@ -60,10 +52,6 @@ _MODE_MAP = {
 
 _WIN_MAIN = "GestureFlow — Real-Time Gesture Recognition"
 
-
-# ─────────────────────────────────────────────────────────────────────────────
-# CLI argument parsing
-# ─────────────────────────────────────────────────────────────────────────────
 
 def _parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
@@ -78,6 +66,12 @@ def _parse_args() -> argparse.Namespace:
         default="gray",
         help="Initial preprocessing mode.",
     )
+    parser.add_argument(
+        "--model",
+        choices=["landmark", "adapted", "original"],
+        default="landmark",
+        help="Model choice: 'landmark' (MediaPipe 3D), 'adapted' (Webcam CNN), or 'original' (LeapMotion CNN).",
+    )
     parser.add_argument("--dev", action="store_true", help="Start with Developer Mode enabled.")
     parser.add_argument("--confidence", type=float, default=0.70, help="Minimum confidence threshold.")
     parser.add_argument("--window", type=int, default=5, help="Prediction stabilizer window size.")
@@ -85,10 +79,6 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--frames", type=int, default=0, help="Max frames to run in mock mode (0 for infinite).")
     return parser.parse_args()
 
-
-# ─────────────────────────────────────────────────────────────────────────────
-# Debug bundle / screenshot helpers
-# ─────────────────────────────────────────────────────────────────────────────
 
 def _save_debug_bundle(
     cfg: InferenceConfig,
@@ -98,7 +88,6 @@ def _save_debug_bundle(
     prediction: Optional[dict],
     tag: str = "",
 ) -> Path:
-    """Save debug bundle: frame.jpg, roi.jpg, normalized.png, prediction.json."""
     ts = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
     bundle_dir = cfg.debug_dir / f"{ts}{('_' + tag) if tag else ''}"
     bundle_dir.mkdir(parents=True, exist_ok=True)
@@ -125,7 +114,6 @@ def _save_debug_bundle(
 
 
 def _save_screenshot(cfg: InferenceConfig, frame: np.ndarray) -> Path:
-    """Save current frame as a JPEG screenshot."""
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
     path = cfg.screenshot_dir / f"screenshot_{ts}.jpg"
     cv2.imwrite(str(path), frame)
@@ -142,7 +130,6 @@ def _append_session_log(
     preprocess_mode: str,
     fps: float,
 ) -> None:
-    """Append one row to the session CSV log."""
     write_header = not log_path.exists()
     with open(log_path, "a", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(
@@ -164,44 +151,29 @@ def _append_session_log(
         })
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Main application loop
-# ─────────────────────────────────────────────────────────────────────────────
-
 def run_demo(cfg: InferenceConfig, mock: bool = False, max_frames: int = 0) -> None:
-    """Execute the main webcam inference loop.
-
-    Args:
-        cfg: InferenceConfig instance controlling all runtime parameters.
-        mock: If True, run with synthetic frames for headless testing.
-        max_frames: Max frames to run before exiting (0 for continuous).
-    """
     print("=" * 60)
     print("  GestureFlow — Real-Time Gesture Recognition")
     print("=" * 60)
+    print(f"  Model Mode : {cfg.model_choice.upper()}")
     print(f"  Checkpoint : {cfg.checkpoint_path}")
     print(f"  Device     : {cfg.device}")
     print(f"  Preprocess : {cfg.preprocess_mode.value}")
     print(f"  Camera     : {'MOCK' if mock else cfg.camera_id}")
     print(f"  Threshold  : {cfg.confidence_threshold:.0%}")
     print("=" * 60)
-    print("  Press H in the webcam window to toggle keyboard help.")
-    print("=" * 60)
 
-    # ── Initialise modules ──────────────────────────────────────────
     camera = CameraStream(cfg, mock=mock)
     camera.start()
 
     detector = HandDetector(cfg)
     preprocessor = HandROIPreprocessor(cfg)
-    predictor = GesturePredictor(cfg=cfg)
+    predictor = GesturePredictor(cfg=cfg, model_choice=cfg.model_choice)
     stabilizer = PredictionStabilizer(cfg)
     renderer = OverlayRenderer()
 
-    # ── Session log ─────────────────────────────────────────────────
     session_log_path = cfg.output_dir / "session_log.csv"
 
-    # ── Runtime state toggles ────────────────────────────────────────
     mirror = cfg.mirror_camera
     show_landmarks = cfg.show_landmarks
     show_skeleton = cfg.show_skeleton
@@ -213,7 +185,6 @@ def run_demo(cfg: InferenceConfig, mock: bool = False, max_frames: int = 0) -> N
 
     current_mode = cfg.preprocess_mode
 
-    # State for the last valid prediction payload
     last_prediction: Optional[dict] = None
     last_roi_bgr: Optional[np.ndarray] = None
     last_gray: Optional[np.ndarray] = None
@@ -237,7 +208,6 @@ def run_demo(cfg: InferenceConfig, mock: bool = False, max_frames: int = 0) -> N
                 break
             frame_counter += 1
 
-            # ── Read frame ───────────────────────────────────────────
             frame = camera.read_frame()
             if frame is None:
                 time.sleep(0.01)
@@ -246,26 +216,28 @@ def run_demo(cfg: InferenceConfig, mock: bool = False, max_frames: int = 0) -> N
             if mirror:
                 frame = cv2.flip(frame, 1)
 
-            loop_start = time.time()
-
-            # ── Hand detection ───────────────────────────────────────
             mp_start = time.time()
             detection_result = detector.detect(frame)
             last_mediapipe_ms = (time.time() - mp_start) * 1000.0
 
             hand_detected = detection_result["hand_detected"]
-            # "landmarks" contains normalized (x, y, z) tuples; extract (x, y) for draw_landmarks
             raw_landmarks = detection_result.get("landmarks") or []
             landmark_list = [(lm[0], lm[1]) for lm in raw_landmarks] if raw_landmarks else []
             bbox = detection_result.get("bbox")
 
-            # ── CNN Inference (gated by pause) ───────────────────────
+            # Inference execution (Landmark or CNN)
             if not paused and hand_detected:
-                roi_bgr, padded_bbox = preprocessor.extract_padded_roi(frame, bbox)
-                gray = preprocessor.preprocess_roi(roi_bgr, mode=current_mode)
-                tensor = preprocessor.to_tensor(gray)
-
-                prediction = predictor.predict(tensor)
+                if predictor.active_model_choice == "landmark" and raw_landmarks:
+                    lms_array = np.array(raw_landmarks, dtype=np.float32)
+                    prediction = predictor.predict_landmarks(lms_array)
+                    roi_bgr, padded_bbox = preprocessor.extract_padded_roi(frame, bbox)
+                    gray = None
+                    tensor = None
+                else:
+                    roi_bgr, padded_bbox = preprocessor.extract_padded_roi(frame, bbox)
+                    gray = preprocessor.preprocess_roi(roi_bgr, mode=current_mode)
+                    tensor = preprocessor.to_tensor(gray)
+                    prediction = predictor.predict(tensor)
 
                 raw_label = prediction["predicted_label"]
                 raw_conf = prediction["confidence"]
@@ -278,10 +250,9 @@ def run_demo(cfg: InferenceConfig, mock: bool = False, max_frames: int = 0) -> N
                 last_prediction = prediction
                 last_roi_bgr = roi_bgr
                 last_gray = gray
-                last_tensor = tensor.cpu().numpy()
+                last_tensor = tensor.cpu().numpy() if tensor is not None else None
                 last_bbox = padded_bbox
 
-                # Session CSV logging
                 _append_session_log(
                     session_log_path,
                     timestamp=datetime.now().isoformat(),
@@ -293,10 +264,17 @@ def run_demo(cfg: InferenceConfig, mock: bool = False, max_frames: int = 0) -> N
                 )
 
             elif not hand_detected:
-                # No hand — clear committed state after a grace period
+                stabilizer.reset()
+                last_label = "---"
+                last_confidence = 0.0
                 last_is_stable = False
+                last_prediction = None
+                last_roi_bgr = None
+                last_gray = None
+                last_tensor = None
+                last_bbox = None
 
-            # ── Render HUD overlays ──────────────────────────────────
+            # Render HUD overlays
             if show_bbox and last_bbox is not None:
                 renderer.draw_bounding_box(
                     frame, last_bbox, last_is_stable, last_confidence, show_bbox
@@ -306,8 +284,11 @@ def run_demo(cfg: InferenceConfig, mock: bool = False, max_frames: int = 0) -> N
                 frame, landmark_list, show_landmarks, show_skeleton
             )
 
+            # Draw Gesture Label + Active Model Type indicator
+            model_tag = predictor.active_model_choice.upper()
+            display_label = f"[{model_tag}] {last_label}" if last_label != "---" else "GESTURE: ---"
             renderer.draw_gesture_label(
-                frame, last_label, last_confidence, last_is_stable, paused
+                frame, display_label, last_confidence, last_is_stable, paused
             )
 
             renderer.draw_telemetry_panel(
@@ -315,7 +296,7 @@ def run_demo(cfg: InferenceConfig, mock: bool = False, max_frames: int = 0) -> N
                 fps=camera.get_fps(),
                 mediapipe_ms=last_mediapipe_ms,
                 cnn_ms=last_prediction["latency_ms"] if last_prediction else 0.0,
-                preprocess_mode=current_mode.value.upper(),
+                preprocess_mode=current_mode.value.upper() if predictor.active_model_choice != "landmark" else "3D_LM",
                 confidence=last_confidence,
                 hand_detected=hand_detected,
                 show_fps=show_fps,
@@ -328,7 +309,6 @@ def run_demo(cfg: InferenceConfig, mock: bool = False, max_frames: int = 0) -> N
 
             renderer.draw_keyboard_help(frame, show_telemetry)
 
-            # ── Developer Mode window ────────────────────────────────
             if dev_mode:
                 renderer.update_developer_window(
                     roi_bgr=last_roi_bgr,
@@ -346,131 +326,64 @@ def run_demo(cfg: InferenceConfig, mock: bool = False, max_frames: int = 0) -> N
                     enabled=False,
                 )
 
-            # ── Display main frame ───────────────────────────────────
             cv2.imshow(_WIN_MAIN, frame)
-
-            # ── Keyboard handler ─────────────────────────────────────
             key = cv2.waitKey(1) & 0xFF
 
-            if key == ord("q") or key == ord("Q") or key == 27:  # Q / ESC
+            if key in [ord("q"), ord("Q"), 27]:
                 print("\n  [Q] Quit requested.")
                 break
-
-            elif key == ord("r") or key == ord("R"):  # Reset statistics
+            elif key in [ord("r"), ord("R")]:
                 stabilizer.reset()
-                last_prediction = None
-                last_roi_bgr = None
-                last_gray = None
-                last_tensor = None
-                last_bbox = None
                 last_label = "???"
                 last_confidence = 0.0
-                last_is_stable = False
                 print("  [R] Session statistics reset.")
-
-            elif key == ord("m") or key == ord("M"):  # Mirror
+            elif key in [ord("t"), ord("T")]:
+                new_model_name = predictor.switch_model()
+                stabilizer.reset()
+                print(f"  [T] Switched active model to: {new_model_name.upper()} ({predictor.checkpoint_path.name})")
+            elif key in [ord("m"), ord("M")]:
                 mirror = not mirror
                 print(f"  [M] Mirror: {'ON' if mirror else 'OFF'}")
-
-            elif key == ord("l") or key == ord("L"):  # Landmarks
+            elif key in [ord("l"), ord("L")]:
                 show_landmarks = not show_landmarks
                 print(f"  [L] Landmarks: {'ON' if show_landmarks else 'OFF'}")
-
-            elif key == ord("b") or key == ord("B"):  # Bounding box
+            elif key in [ord("b"), ord("B")]:
                 show_bbox = not show_bbox
                 print(f"  [B] Bounding box: {'ON' if show_bbox else 'OFF'}")
-
-            elif key == ord("s") or key == ord("S"):  # Skeleton
+            elif key in [ord("s"), ord("S")]:
                 show_skeleton = not show_skeleton
                 print(f"  [S] Skeleton: {'ON' if show_skeleton else 'OFF'}")
-
-            elif key == ord("f") or key == ord("F"):  # FPS
+            elif key in [ord("f"), ord("F")]:
                 show_fps = not show_fps
                 print(f"  [F] FPS display: {'ON' if show_fps else 'OFF'}")
-
-            elif key == ord("p") or key == ord("P"):  # Pause
+            elif key in [ord("p"), ord("P")]:
                 paused = not paused
                 print(f"  [P] Prediction: {'PAUSED' if paused else 'RESUMED'}")
-
-            elif key == ord("h") or key == ord("H"):  # Hide HUD
+            elif key in [ord("h"), ord("H")]:
                 show_telemetry = not show_telemetry
                 print(f"  [H] Telemetry HUD: {'ON' if show_telemetry else 'OFF'}")
-
-            elif key == ord("d") or key == ord("D"):  # Developer Mode
+            elif key in [ord("d"), ord("D")]:
                 dev_mode = not dev_mode
                 if not dev_mode:
                     renderer.destroy_developer_window()
                 print(f"  [D] Developer Mode: {'ON' if dev_mode else 'OFF'}")
 
-            elif key == ord("o") or key == ord("O"):  # Debug save
-                _save_debug_bundle(cfg, frame, last_roi_bgr, last_gray, last_prediction)
-
-            elif key == ord("c") or key == ord("C") or key == ord(" "):  # Screenshot
-                _save_screenshot(cfg, frame)
-
-            elif key == ord("1"):  # Gray mode
-                current_mode = PreprocessMode.GRAY
-                stabilizer.reset()
-                print("  [1] Preprocessing mode: GRAY")
-
-            elif key == ord("2"):  # HistEq mode
-                current_mode = PreprocessMode.HIST_EQ
-                stabilizer.reset()
-                print("  [2] Preprocessing mode: HIST_EQ")
-
-            elif key == ord("3"):  # CLAHE mode
-                current_mode = PreprocessMode.CLAHE
-                stabilizer.reset()
-                print("  [3] Preprocessing mode: CLAHE")
-
     except KeyboardInterrupt:
         print("\n  Interrupted by Ctrl+C.")
     finally:
-        print("\n  Releasing camera and destroying windows …")
         camera.stop()
         detector.close()
         cv2.destroyAllWindows()
-
-        # ── Session summary ──────────────────────────────────────────
-        print("\n" + "=" * 60)
-        print("  SESSION SUMMARY")
-        print("=" * 60)
-        print(f"  Total predictions : {stabilizer.total_predictions}")
-        print(f"  Most frequent     : {stabilizer.get_most_frequent_gesture()}")
-        dist = stabilizer.gesture_counts
-        if dist:
-            print("  Gesture counts    :")
-            for lbl, cnt in dist.most_common():
-                print(f"    {lbl:<22s} {cnt:>5d}")
-        summary_path = cfg.output_dir / "session_summary.json"
-        summary_payload = {
-            "total_predictions": stabilizer.total_predictions,
-            "most_frequent_gesture": stabilizer.get_most_frequent_gesture(),
-            "gesture_counts": dict(stabilizer.gesture_counts),
-            "session_log_path": str(session_log_path),
-            "preprocess_mode": current_mode.value,
-            "confidence_threshold": cfg.confidence_threshold,
-        }
-        with open(summary_path, "w", encoding="utf-8") as f:
-            json.dump(summary_payload, f, indent=2)
-
-        print(f"  Session summary   : {summary_path}")
-        print("=" * 60)
         print("  GestureFlow exited cleanly.")
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Entry point
-# ─────────────────────────────────────────────────────────────────────────────
-
 def main() -> None:
-    """CLI entry point: parse args, patch config, start demo."""
     args = _parse_args()
-
     cfg = inference_config
     cfg.camera_id = args.camera
     cfg.mirror_camera = not args.no_mirror
     cfg.preprocess_mode = _MODE_MAP[args.mode]
+    cfg.model_choice = args.model
     cfg.developer_mode = args.dev
     cfg.confidence_threshold = args.confidence
     cfg.prediction_window_size = args.window
